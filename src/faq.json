@@ -1,0 +1,42 @@
+[
+    {   
+        "id": 1,
+        "question": "How do I order my favorite product?",
+        "answer": "You can order your products using our app or via this website."
+    },
+    {   
+        "id": 2,
+        "question": "How do I pay for my order?",
+        "answer": "You can pay for your order using your credit card or via PayPal."
+    },
+    {   
+        "id": 3,
+        "question": "How do I know if my order has been shipped?",
+        "answer": "You will receive an email with the tracking number once your order has been shipped."
+    },
+    {   
+        "id": 4,
+        "question": "How long does it take to receive my order?",
+        "answer": "It takes 3-5 business days to receive your order."
+    },
+    {   
+        "id": 5,
+        "question": "How do I return my order?",
+        "answer": "You can return your order within 30 days of purchase."
+    },
+    {   
+        "id": 6,
+        "question": "How do I cancel my order?",
+        "answer": "You can cancel your order within 24 hours of purchase."
+    },
+    {   
+        "id": 7,
+        "question": "How do I change my order?",
+        "answer": "You can change your order within 24 hours of purchase."
+    },
+    {   
+        "id": 8,
+        "question": "How do I contact customer support?",
+        "answer": "You can contact our customer support team via email at info@klassicwatches.com"
+    }
+]

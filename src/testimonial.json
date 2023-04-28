@@ -1,0 +1,23 @@
+[
+        {
+                "id": 1,
+                "name": "John Doe",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed lectus justo. Aliquam mattis metus at lorem suscipit, vel molestie sapien dictum",
+                "image": "../public/images/profile-pic.png",
+                "work": "CEO, ABC Company"
+        },
+        {
+                "id": 2,
+                "name": "Jane Doe",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed lectus justo. Aliquam mattis metus at lorem suscipit, vel molestie sapien dictum",
+                "image": "../public/images/profile-pic.png",
+                "work": "CEO, ABC Company"
+        },
+        {
+                "id": 3,
+                "name": "John Smith",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed lectus justo. Aliquam mattis metus at lorem suscipit, vel molestie sapien dictum",
+                "image": "../public/images/profile-pic.png",
+                "work": "CEO, ABC Company"
+        }
+]
