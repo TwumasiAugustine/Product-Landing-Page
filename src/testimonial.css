@@ -1,0 +1,214 @@
+.testimonial .short-info {
+    text-align: center;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.testimonial .testimonial-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    transform: translateX(100%);
+}
+
+.testimonial .testimonial-container .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 50px 0;
+    color: var(--primary-color);
+    background-color: #e0e0e0;
+    border: 1px solid inherit;
+    border-radius: 5px;
+    width: 300px;
+    height: fit-content;
+    position: relative;
+}
+
+.testimonial .testimonial-container .testimonial-card .testimonial-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: fit-content;
+}
+
+.testimonial .testimonial-container .testimonial-card .testimonial-img {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonial .testimonial-container .testimonial-card .testimonial-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial .testimonial-container .testimonial-card .testimonial-info h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.testimonial .testimonial-container .testimonial-card .testimonial-info p {
+    font-size: 0.97rem;
+    font-weight: 500;
+    line-height: 1.1;
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--primary-color);
+}
+.subscribe {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    max-width: 650px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe input {
+    position: relative;
+    display: block;
+    padding: 1rem;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid var(--third-color);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.subscribe input:focus {
+    outline: none;
+}
+
+.subscribe input::placeholder {
+    color: #ccc;
+    font-size: 0.86rem;
+}
+
+.subscribe button {
+    position: relative;
+    top: -65px;
+    right: -39%;
+    width: fit-content;
+    display: block;
+    padding: 0.8rem 1rem;
+    background-color: var(--third-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid var(--third-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe button i {
+    margin-left: 0.5rem;
+}
+
+.downloadApp-container {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    max-width: 650px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.downloadApp button {
+    display: inline-block;
+    padding: 1rem;
+    background-color: var(--third-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 1px solid var(--third-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.downloadApp button i {
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.downloadApp button:hover {
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    border: 1px solid var(--third-color);
+}
+@media screen and (max-width: 767px) {
+    .testimonial .testimonial-container .testimonial-card{
+        padding: 0.5rem;
+        margin: 10px 0;
+        width: 250px;
+        height: fit-content;
+    }
+    .testimonial .testimonial-container .testimonial-card .testimonial-info{
+        padding: 0.5rem;
+        gap: 0.3rem;
+    }
+    .testimonial .testimonial-container .testimonial-card .testimonial-img{
+        top: -20px;
+        width: 40px;
+        height: 40px;
+    }
+    .testimonial .testimonial-container .testimonial-card .testimonial-info p{
+        font-size: 0.74rem;
+    }
+    .testimonial .testimonial-container .testimonial-card .testimonial-info h3{
+        font-size: 0.89rem;
+    }
+    .subscribe input{
+        padding: 0.8rem 1rem;
+        margin: 0;
+        width: 100%;
+        max-width: 400px;
+    }
+    .subscribe button{
+        top: -44px;
+        right: -108px;
+        padding: 0.8rem;
+        font-size: 0.85rem;
+    }
+    .downloadApp button{
+        padding: 0.5rem;
+        margin: 0 1rem;
+        font-size: 0.89rem;
+    }
+    .downloadApp button i {
+        font-size: 0.85rem;
+    }
+}

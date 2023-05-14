@@ -1,6 +1,7 @@
 import React from 'react'
 import Video from './assets/pexels-karolina-grabowska-8532808-4096x2160-25fps.mp4';
 import SignUp from './signup';
+import './heroSection.css'
 
 function HeroSection() {
     

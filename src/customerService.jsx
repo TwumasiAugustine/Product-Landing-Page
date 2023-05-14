@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './customerService.css'
 function CustomerService() {
     return (
         <section className='customerService'>

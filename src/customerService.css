@@ -1,0 +1,70 @@
+.customerService {
+    background-color: #e0e0e0;
+    padding: 3rem 0;
+}
+
+.customerService .short-info {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.customerService .customerServiceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.customerService .customerServiceContainer .customerServiceBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.customerService .customerServiceContainer .customerServiceBox i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.customerService .customerServiceContainer .customerServiceBox .customerServiceText h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.customerService .customerServiceContainer .customerServiceBox .customerServiceText p {
+    color: #333;
+}
+
+@media screen and (max-width: 767px) {
+    .customerService .customerServiceContainer{
+        width: 100%;
+        gap: 5px;
+        padding: 0;
+        margin: 0;
+    }
+        .customerService .customerServiceContainer .customerServiceBox{
+            max-width: 150px;
+            padding: 5px;
+        }
+    .customerService .customerServiceContainer .customerServiceBox .customerServiceIcon .fas{
+        font-size: 1.2rem;
+    }
+    .customerService .customerServiceContainer .customerServiceBox .customerServiceText h3{
+        font-size: 1rem;
+    }
+    .customerService .customerServiceContainer .customerServiceBox .customerServiceText p{
+        font-size: 0.87rem;
+    }
+}

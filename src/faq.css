@@ -1,0 +1,80 @@
+.faq h2 {
+    padding: 1rem;
+}
+
+.faq .container {
+    background-color: var(--primary-color);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    padding: 0 5rem;
+}
+
+.faq .accordion-container {
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq .accordion-container .accordion {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.accordion-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: var(--third-color);
+    color: var(--primary-color)
+}
+
+.accordion-title,
+.accordion-content {
+    padding: 1rem;
+}
+
+.accordion-content {
+    background-color: #e0e0e0;
+}
+
+.faq .container .sideImgContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.faq .container .sideImgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+    .faq .container{
+        padding: 1rem 2rem;
+    }
+    .faq .accordion-container .accordion{
+        font-size: 0.89rem;
+    }
+    .faq .container .sideImgContainer img{
+        object-fit: contain;
+        max-width: 400px;
+    }
+}

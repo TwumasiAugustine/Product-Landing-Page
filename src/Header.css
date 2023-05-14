@@ -1,0 +1,422 @@
+#header .firstHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    background: var(--primary-color);
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #000;
+}
+
+#header .firstHeader .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+}
+
+#header .firstHeader .social-media a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+#header .firstHeader .social-media a:nth-child(1) {
+    color: #3b5998;
+}
+
+#header .firstHeader .social-media a:nth-child(2) {
+    color: #55acee;
+}
+
+#header .firstHeader .social-media a:nth-child(3) {
+    color: #dd4b39;
+}
+
+#header .firstHeader .social-media a:hover {
+    color: var(--third-color);
+}
+
+#header .firstHeader .randomText p {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+#header .firstHeader .hoverDropdown {
+    position: relative;
+}
+
+#header .firstHeader .hoverDropdown .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#header .firstHeader .hoverDropdown .dropdown .dropbtn {
+    color: var(--primary-color);
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+#header .firstHeader .hoverDropdown .dropdown .dropbtn i {
+    margin-left: 0.5rem;
+}
+
+#header .firstHeader .hoverDropdown .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--primary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#header .firstHeader .hoverDropdown .dropdown .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#header .firstHeader .hoverDropdown .dropdown .dropdown-content a:hover {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+}
+
+#header .firstHeader .hoverDropdown .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#header .firstHeader .hoverDropdown .dropdown .dropdown-content a i {
+    margin-right: 0.5rem;
+}
+
+#header .secondHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    background: var(--primary-color);
+    padding: 0 3rem;
+    width: 100%;
+    transition: all 0.3s ease-in;
+    box-shadow: 0 2px 13px rgba(0, 0, 0, 0.2)
+}
+
+#header .secondHeader .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .secondHeader .logo a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    line-height: 1.3;
+}
+
+#header .secondHeader .logo a:hover {
+    color: var(--third-color);
+}
+
+#header .secondHeader .logo a img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+#header .secondHeader .nav-container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu {
+    position: relative;
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropbtn {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropbtn:hover {
+    color: var(--third-color)
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropbtn i {
+    margin-left: 0.4rem;
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    background-color: var(--primary-color);
+    min-width: 400px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li {
+    margin: 0;
+    width: 100%;
+    padding: 1rem;
+
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li a {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li:hover {
+    background: var(--third-color);
+    color: var(--primary-color)
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li:hover a {
+    color: var(--primary-color)
+}
+
+#header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#header .secondHeader .nav-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+#header .secondHeader .nav-icons button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+#header .secondHeader .nav-icons i {
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#header .secondHeader .nav-icons .cart {
+    position: relative;
+}
+
+#header .secondHeader .nav-icons .cart .notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background: red;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#header .secondHeader .nav-icons .wishList {
+    position: relative;
+}
+
+#header .secondHeader .nav-icons .wishList .notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: -7px;
+    background: red;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+/* Mobile Phone Screen */
+@media screen and (max-width: 767px) {
+    body{
+        overflow-x: hidden;
+    }
+    #header .firstHeader{
+        padding: 0 10px;
+    }
+    #header .firstHeader .social-media{
+        width: fit-content;
+    }
+    #header .firstHeader .social-media a i {
+        font-size: 1rem;
+    }
+    #header .firstHeader .randomText  p{
+        font-size: 12px;
+    }
+    #header .firstHeader .hoverDropdown{
+        margin-right: 10px;
+    }
+    #header .firstHeader .hoverDropdown .dropdown .dropbtn{
+        font-size: 12px;
+    }
+    #header .firstHeader .hoverDropdown .dropdown .dropbtn i{
+        font-size: 12px;
+    }
+    #header .firstHeader .hoverDropdown .dropdown .dropdown-content a{
+        font-size: 12px;
+    }
+    #header .secondHeader{
+        justify-content: space-between;
+        margin: 0;
+        padding: 0 20px;
+    }
+    #header .secondHeader .navBtn{
+        all: unset;
+        font-size: 1.5rem;
+        cursor: pointer;
+        outline: none;
+    }
+    #header .secondHeader .logo a {
+        font-size: 18px;
+    }
+    #header .secondHeader .logo a img{
+        width: 2rem;
+        height: 2rem;
+    }
+    #header .secondHeader .nav-container{
+        position: fixed;
+        top: 0;
+        background: var(--primary-color);
+        left: 0;
+        height: 100%;
+        width: 75%;
+        z-index: 99;
+        transform: translateX(-100%);
+        transition: all 0.5s ease;
+    }
+    .openMenu {
+        transform: translateX(0%);
+    }
+    #header .secondHeader .nav-container nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%;
+        padding: 50px 0;
+    }
+    #header .secondHeader .nav-container nav .closeNav{
+        position: absolute;
+        top: 0;
+        right: 5px;
+    }
+    #header .secondHeader .nav-icons {
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    #header .secondHeader .nav-icons button{
+        padding: 0;
+    }
+    #header .secondHeader .nav-icons button i{
+        font-size: 1.2rem;
+    }
+    #header .secondHeader .nav-icons .cart .notification{
+        width: 15px;
+        height: 15px;
+        font-size: 0.68rem;
+    }
+    #header .secondHeader .nav-icons .wishList .notification{
+        width: 15px;
+        height: 15px;
+        font-size: 0.68rem;
+    }
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropbtn{
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        z-index: auto;
+        min-width: 100px;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: #fffffff6;
+    }
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content .list{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li{
+        margin: 0;
+        padding: 0;
+    }
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li a{
+        width: 100%;
+    }
+}

@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
-import WhiteWatch from './assets/watch-compare-se-202209.jpeg'
-
+import WhiteWatch from './assets/watch-compare-se-202209.jpeg';
+import './featuredProd.css'
 import productData from './product.json'
 
 function FeaturedProd(props){

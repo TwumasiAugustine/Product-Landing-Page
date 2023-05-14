@@ -1,7 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react';
 import Table  from './table';
 import cartData from './product.json';
-import 'animate.css'
+import 'animate.css';
+import './product.css';
 
 
 

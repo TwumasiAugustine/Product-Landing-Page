@@ -1,6 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react';
 import 'animate.css';
-import data from './testimonial.json'
+import data from './testimonial.json';
+import './testimonial.css';
 
 
 function Testimonial() {
@@ -28,21 +29,21 @@ function Testimonial() {
         <section className='testimonial'>
             <h2>What Our Costumers Say</h2>
             <p className='short-info'>Our costumers are happy with our products</p>
-            <div className={`testimonial-container ${isVisible ? "animate__animated animate__slideInUp" : ""}`} ref={containerRef}>
-                    {data.map((item) => (
-                        <div className='testimonial-card' key={item.id}>
-                            <div className='testimonial-img'>
-                                <img src={item.image} alt={item.name}/>
-                            </div>
-                            <div className='testimonial-info'>
-                                <p className='testimonial-text'>{item.text}</p>
-                                <div className='testimonial-user'>
-                                    <h3 className='testimonial-user-name'>{item.name}</h3>
-                                </div>
-                                <small>{item.work}</small>
-                            </div>
+            <div className={`testimonial-container ${isVisible ? "animate__animated animate__slideInLeft" : ""}`} ref={containerRef}>
+                {data.map((item) => (
+                    <div className='testimonial-card' key={item.id}>
+                        <div className='testimonial-img'>
+                            <img src={item.image} alt={item.name}/>
                         </div>
-                    ))}
+                        <div className='testimonial-info'>
+                            <p className='testimonial-text'>{item.text}</p>
+                            <div className='testimonial-user'>
+                                <h3 className='testimonial-user-name'>{item.name}</h3>
+                            </div>
+                            <small>{item.work}</small>
+                        </div>
+                    </div>
+                ))}
             </div>
             <h2>Subscribe to Get Update</h2>
             <p className='short-info'>Subscribe to get update from us</p>

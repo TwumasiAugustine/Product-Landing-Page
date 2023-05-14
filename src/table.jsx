@@ -1,5 +1,6 @@
 import React from 'react';
 import tableData from './product.json';
+import './table.css'
 
 function Table(){
     

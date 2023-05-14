@@ -5,6 +5,7 @@ import CollectionNav from './collectionNav';
 import MaterialNav from './material';
 import Styles from './styles';
 import FirstHeader from './firstHeader';
+import  './Header.css'
 
 
 function Header() {
@@ -30,7 +31,12 @@ function Header() {
             });
         }
     }, []);
-
+    
+    const openMobileNav = () => {
+        const navContainer = document.querySelector('.nav-container')
+        navContainer.classList.add('openMenu')
+        console.log('clicked')
+    }
 
     const openCartMenu = () => {
         const cartContainer = document.querySelector('.cart-container')
@@ -49,7 +55,10 @@ function Header() {
     return (
     <header id="header" className='header'>
         <FirstHeader/>
-        <div className={sticky ? 'secondHeader sticky' : 'secondHeader'} >
+            <div className={sticky ? 'secondHeader sticky' : 'secondHeader'} >
+                <div className='mobileMenu'>
+                    <button type='button' className='navBtn openNav' onClick={() => openMobileNav()}><i className='fa fa-navicon'></i></button>
+            </div>
             <div className='logo'>
                 <a href='#'>
                     <img src={Logo} alt='Klassic watches'/>
@@ -57,7 +66,12 @@ function Header() {
                 </a>
             </div>
             <div className='nav-container'>
-                <nav>
+                    <nav>
+                        <div className='closeNav'>
+                            <button type='button' className='navBtn closeNav'>
+                                <i className='fa fa-close'></i>
+                            </button>
+                        </div>
                     <div className='hoverDropdownMenu'>
                         <div className='dropdown'>
                             <button className='dropbtn'>Collections <i className='fa fa-caret-down'></i></button>

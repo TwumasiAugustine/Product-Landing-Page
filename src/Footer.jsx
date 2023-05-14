@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Footer.css'
 function Footer() {
 
     return(
@@ -109,9 +109,6 @@ function Footer() {
                 </div>
                 <div className='nav-link'>
                     <ul>
-                        <li>
-                            <a href='#'>Home</a>
-                        </li>
                         <li>
                             <a href='#'>Shop</a>
                         </li>

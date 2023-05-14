@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import SideImage from './assets/gropwach.jpeg';
 import Faq from './faq.json'
 import 'animate.css';
+import './faq.css'
 
 function FrequentAskQuestion() {
     const [expandedItems, setExpandedItems] = useState(Array(Faq.length).fill(false));
