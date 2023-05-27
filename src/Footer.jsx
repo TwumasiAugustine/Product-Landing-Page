@@ -15,11 +15,11 @@ function Footer() {
                             </li>
                             <li>
                                 <i className='fa fa-envelope'></i>
-                                info@klassicwatch.com
+                                <a href='#'>info@klassicwatch.com</a>
                             </li>
                             <li>
                                 <i className='fas fa-phone'></i>
-                                +1 (236) 3526 4552
+                                <a href="tel: +1 (236) 3526 45523">+1 (236) 3526 4552</a>
                             </li>
                         </ul>
                     </div>

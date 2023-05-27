@@ -60,7 +60,7 @@
     outline: none;
     background-color: inherit;
     font-family: inherit;
-    margin: 0;
+    margin-right: 50px;
     padding: 0;
     cursor: pointer;
 }
@@ -236,6 +236,7 @@
     cursor: pointer;
     color: var(--secondary-color);
     font-size: 1.5rem;
+    padding: 7px;
     transition: all 0.3s ease;
 }
 
@@ -312,6 +313,7 @@
     }
     #header .firstHeader .hoverDropdown .dropdown .dropbtn{
         font-size: 12px;
+        margin: 0;
     }
     #header .firstHeader .hoverDropdown .dropdown .dropbtn i{
         font-size: 12px;
@@ -336,20 +338,6 @@
     #header .secondHeader .logo a img{
         width: 2rem;
         height: 2rem;
-    }
-    #header .secondHeader .nav-container{
-        position: fixed;
-        top: 0;
-        background: var(--primary-color);
-        left: 0;
-        height: 100%;
-        width: 75%;
-        z-index: 99;
-        transform: translateX(-100%);
-        transition: all 0.5s ease;
-    }
-    .openMenu {
-        transform: translateX(0%);
     }
     #header .secondHeader .nav-container nav{
         display: flex;
@@ -419,4 +407,22 @@
     #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li a{
         width: 100%;
     }
+}
+
+/* Tablet Screens */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #header .firstHeader .social-media a i {
+        font-size: 1.2rem;
+    }
+    #header .secondHeader .navBtn{
+        all: unset;
+        font-size: 1.8rem;
+        cursor: pointer;
+        outline: none;
+    }
+    #header .secondHeader .nav-icons i {
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
 }

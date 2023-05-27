@@ -49,11 +49,12 @@ footer .footer-one .buttomNavContainer h3 {
 footer .footer-two {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
     background: #000000b7;
     color: #fff;
-    padding: 1rem 5rem;
+    padding: 1rem ;
 }
 
 footer .footer-two .copyright p {
@@ -78,7 +79,6 @@ footer .footer-two a:hover {
 footer .footer-two .nav-link ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     gap: 1rem;
     list-style: none;
     padding: 0;
@@ -98,6 +98,9 @@ footer .footer-two .nav-link ul li a {
         padding: 0;
         margin: 0;
     }
+    footer .footer-one {
+        padding: 10px;
+    }
     footer .footer-one .buttomNavContainer{
         flex-direction: column;
         padding: 10px;
@@ -106,8 +109,15 @@ footer .footer-two .nav-link ul li a {
         font-size: 0.89rem;
         margin: 0;
     }
+    footer .footer-one .buttomNavContainer ul li {
+        padding: 0.2rem;
+        margin: 0;
+    }
     footer > ul li {
         font-size: 0.75rem;
+    }
+    footer .footer-one .buttomNavContainer  a {
+        color: #ddd;
     }
     footer .footer-one ul li i {
         font-size: 0.85rem;
@@ -117,8 +127,18 @@ footer .footer-two .nav-link ul li a {
         flex-direction: column;
         font-size: 0.85rem;
         padding: 10px;
+        text-align: center;
     }
     footer .footer-two .nav-link ul{
         flex-wrap: wrap;
+    }
+
+    /* Tablet Screens */
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        footer .footer-two{
+            margin: 0;
+            padding: 0;
+        }
     }
 }

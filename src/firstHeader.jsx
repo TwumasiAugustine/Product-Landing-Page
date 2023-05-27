@@ -22,6 +22,22 @@ function FirstHeader() {
         return () => clearInterval(textInterval)
     }, [text], 5000)
 
+    const handleDropBtnValue1 = () => {
+        const dropBtn = document.querySelector('.dropbtn')
+        dropBtn.innerHTML = 'EUR <i className="fa fa-caret-down"></i>'
+    }
+    const handleDropBtnValue2 = () => {
+        const dropBtn = document.querySelector('.dropbtn')
+        dropBtn.innerHTML = 'GBP <i className="fa fa-caret-down"></i>'
+    }
+    const handleDropBtnValue3 = () => {
+        const dropBtn = document.querySelector('.dropbtn')
+        dropBtn.innerHTML = 'AUD <i className="fa fa-caret-down"></i>'
+    }
+    const handleDropBtnValue4 = () => {
+        const dropBtn = document.querySelector('.dropbtn')
+        dropBtn.innerHTML = 'USD <i className="fa fa-caret-down"></i>'
+    }
     return (
         <div className="firstHeader" >
             <div className='social-media'>
@@ -44,18 +60,18 @@ function FirstHeader() {
                 <div className='dropdown'>
                     <button className='dropbtn'>USD <i className='fa fa-caret-down'></i></button>
                     <div className='dropdown-content'>
-                        <a href=''>
+                        <a href='' onClick={handleDropBtnValue4}>
                             <i className='fa fa-usd'></i>
                             USD
                         </a>
-                        <a href='#'>
+                        <a href='' onClick={handleDropBtnValue1}>
                             <i className='fa fa-eur'></i>
                             EUR
                         </a>
-                        <a href='#'>
+                        <a href='' onClick={handleDropBtnValue2}>
                             <i className='fa fa-gbp'></i>
                             GBP</a>
-                        <a href='#'>
+                        <a href='' onClick={handleDropBtnValue3}>
                             <i className='fa fa-usd'></i>
                             AUD</a>
                     </div>

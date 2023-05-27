@@ -186,13 +186,50 @@ select {
         font-size: 1.8rem;
     }
     .video-background .text p{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .video-background .text .btn{
         font-size: 0.89rem;
         padding: 10px;
     }
     .signup-container{
-        display: none;
+        align-items: center;
+        top: 1.1rem;
+    }
+    .signup-container .closeBtn {
+        width: 30px;
+        height: 30px;
+    }
+    .signup-container .closeBtn i {
+        font-size: 1rem;
+    }
+    .signup-container form .form-group input,
+select,
+button {
+        padding: 10px;
+        width: 100%;
+        outline: none;
+        border: 1px solid;
+    }
+    .signup-container form .form-group input,
+select{
+        font-size: 1rem;
+    }
+    .signup-container form .form-group button {
+    font-size: 1rem;
+    padding: 10px;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .video-background .text{
+        width: 100%;
+        padding: 0 30px;
+    }
+    .video-background .text h1{
+        font-size: 2rem;
+    }
+    .video-background .text p{
+        font-size: 1.4rem;
     }
 }

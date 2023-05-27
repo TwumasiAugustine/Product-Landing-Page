@@ -5,45 +5,28 @@ import './testimonial.css';
 
 
 function Testimonial() {
-    const [isVisible, setIsVisible] = useState(false);
-    const containerRef = useRef(null);
-
-    const handleScroll = () => {
-        const containerPosition = containerRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        if (containerPosition.top < windowHeight && containerPosition.bottom >= 0) {
-        setIsVisible(true);
-    } else {
-        setIsVisible(false);
-    }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [])
-
     
     return(
         <section className='testimonial'>
             <h2>What Our Costumers Say</h2>
             <p className='short-info'>Our costumers are happy with our products</p>
-            <div className={`testimonial-container ${isVisible ? "animate__animated animate__slideInLeft" : ""}`} ref={containerRef}>
-                {data.map((item) => (
-                    <div className='testimonial-card' key={item.id}>
-                        <div className='testimonial-img'>
-                            <img src={item.image} alt={item.name}/>
-                        </div>
-                        <div className='testimonial-info'>
-                            <p className='testimonial-text'>{item.text}</p>
-                            <div className='testimonial-user'>
-                                <h3 className='testimonial-user-name'>{item.name}</h3>
+            <div className={`testimonial-container`}>
+                <div className='testimonials'>
+                    {data.map((item) => (
+                        <div className='testimonial-card' key={item.id}>
+                            <div className='testimonial-img'>
+                                <img src={item.image} alt={item.name}/>
                             </div>
-                            <small>{item.work}</small>
+                            <div className='testimonial-info'>
+                                <p className='testimonial-text'>{item.text}</p>
+                                <div className='testimonial-user'>
+                                    <h3 className='testimonial-user-name'>{item.name}</h3>
+                                </div>
+                                <small>{item.work}</small>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
             <h2>Subscribe to Get Update</h2>
             <p className='short-info'>Subscribe to get update from us</p>

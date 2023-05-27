@@ -44,7 +44,7 @@ function SearchList() {
         <div className="search">
           <h3>Search our Site</h3>
           <button className="close" onClick={() => closeSearchContainer()}>
-            X
+            <i className="fa fa-close"></i>
           </button>
         </div>
         <div className="search-list">

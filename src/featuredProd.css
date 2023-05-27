@@ -1,5 +1,5 @@
 .featuredProd .short-info {
-    color: #6666;
+    color: #333;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
@@ -35,7 +35,7 @@
 }
 
 .featuredProd .products  .text-con .inner-text p {
-    color: #6666;
+    color: #333;
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 1rem;
@@ -236,27 +236,6 @@
 @media screen and (max-width: 767px) {
     .featuredProd .products{
         display: none;
-        gap: 5px;
-    }
-    .featuredProd .products .left-text{
-        padding: 0 10px;
-    }
-    .featuredProd .products .right-text{
-        padding: 0 10px;
-    }
-    .featuredProd .products .text-con .inner-text h4{
-        font-size: 1rem;
-        white-space: pre-wrap;
-    }
-    .featuredProd .products .text-con .inner-text p{
-        font-size: 0.89rem;
-    }
-    .featuredProd .products  .text-con .inner-icon i{
-        font-size: 1rem;
-        margin-left: 1rem;
-    }
-    .featuredProd .products .center-img img{
-        width: 110px;
     }
     .featuredProd .product{
         padding: 10px;
@@ -302,4 +281,39 @@
         padding: 0.5rem;
         font-size: 0.89rem;
     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .featuredProd .products .left-text{
+        padding: 0 20px;
+    }
+    .featuredProd .products .right-text{
+        padding: 0 20px;
+    }
+    .featuredProd .products .text-con .inner-text h4{
+        font-size: 1.2rem;
+        white-space: pre-wrap;
+    }
+    .featuredProd .products .text-con .inner-text p{
+        font-size: 1rem;
+    }
+    .featuredProd .products  .text-con .inner-icon i{
+        font-size: 1.2rem;
+        margin-left: 1rem;
+    }
+    .featuredProd .product{
+        padding: 15px;
+    }
+    .featuredProd .product .product-box .countDown-con .countDown .countDown-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .1rem;
+    width: 3.7rem;
+    height: 4rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 }

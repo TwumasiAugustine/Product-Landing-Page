@@ -32,12 +32,15 @@ function Header() {
         }
     }, []);
     
-    const openMobileNav = () => {
-        const navContainer = document.querySelector('.nav-container')
-        navContainer.classList.add('openMenu')
-        console.log('clicked')
+    const openNavMenu = () => {
+        const navMenu = document.querySelector('.nav-container')
+        navMenu.classList.add('openMenu')
     }
-
+    const closeNavMenu = () => {
+        const navMenu = document.querySelector('.nav-container')
+        navMenu.classList.remove('openMenu')
+    }
+    
     const openCartMenu = () => {
         const cartContainer = document.querySelector('.cart-container')
         cartContainer.classList.add('cartOpen')
@@ -57,7 +60,7 @@ function Header() {
         <FirstHeader/>
             <div className={sticky ? 'secondHeader sticky' : 'secondHeader'} >
                 <div className='mobileMenu'>
-                    <button type='button' className='navBtn openNav' onClick={() => openMobileNav()}><i className='fa fa-navicon'></i></button>
+                    <button type='button' className='navBtn openNav' onClick={openNavMenu}><i className='fa fa-navicon'></i></button>
             </div>
             <div className='logo'>
                 <a href='#'>
@@ -65,39 +68,39 @@ function Header() {
                     Klassic Watches
                 </a>
             </div>
-            <div className='nav-container'>
-                    <nav>
-                        <div className='closeNav'>
-                            <button type='button' className='navBtn closeNav'>
-                                <i className='fa fa-close'></i>
-                            </button>
-                        </div>
-                    <div className='hoverDropdownMenu'>
-                        <div className='dropdown'>
-                            <button className='dropbtn'>Collections <i className='fa fa-caret-down'></i></button>
-                            <div className='dropdown-content'>
-                                <CollectionNav />
+                    <div className={`nav-container`}>
+                        <nav>
+                            <div className='closeNav'>
+                                <button type='button' className='navBtn closeNav' onClick={closeNavMenu}>
+                                    <i className='fa fa-close'></i>
+                                </button>
                             </div>
-                        </div>
-                    </div>
-                    <div className='hoverDropdownMenu'>
-                        <div className='dropdown'>
-                            <button className='dropbtn'>Materials <i className='fa fa-caret-down'></i></button>
-                            <div className='dropdown-content'>
-                                <MaterialNav />
+                            <div className='hoverDropdownMenu'>
+                                <div className='dropdown'>
+                                    <button className='dropbtn'>Collections <i className='fa fa-caret-down'></i></button>
+                                    <div className='dropdown-content'>
+                                        <CollectionNav />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className='hoverDropdownMenu'>
-                        <div className='dropdown'>
-                            <button className='dropbtn'>Styles <i className='fa fa-caret-down'></i></button>
-                            <div className='dropdown-content'>
-                                <Styles />
+                            <div className='hoverDropdownMenu'>
+                                <div className='dropdown'>
+                                    <button className='dropbtn'>Materials <i className='fa fa-caret-down'></i></button>
+                                    <div className='dropdown-content'>
+                                        <MaterialNav />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div className='hoverDropdownMenu'>
+                                <div className='dropdown'>
+                                    <button className='dropbtn'>Styles <i className='fa fa-caret-down'></i></button>
+                                    <div className='dropdown-content'>
+                                        <Styles />
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
                     </div>
-                </nav>
-            </div>
             <div className='nav-icons'>
                 <div className='search'>
                     <button type='button' className='btn' onClick={() => openSearchMenu()} title='Search Products'><i className='fas fa-search'></i></button>

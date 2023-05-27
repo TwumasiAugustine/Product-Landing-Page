@@ -4,10 +4,15 @@
     margin: 0 auto;
     padding: 1rem;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
 }
 
 .products .products-container .wrapper {
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -154,20 +159,44 @@
     color: var(--secondary-color);
     border: 1px solid var(--third-color);
 }
-@media screen and (max-width: 767px) {
-    .products .products-container .wrapper{
-        position: relative;
-        max-width: 300px;
-        -webkit-overflow-scrolling: touch;
-        overflow-x: scroll;
-        scroll-snap-type: both;
-        scroll-behavior: smooth;
-        scroll-snap-align:center;
-        flex-wrap: nowrap;
-        padding: 0;
-        margin: 0;
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
-    .products .products-container .product-card {
+
+    100% {
+        -webkit-transform: translateX(calc(-200px * 6));
+        transform: translateX(calc(-200px * 6));
+    }
+}
+@media screen and (max-width: 767px) {
+    .products .products-container::before{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        content: "";
+        width: 24%;
+        height: 120px;
+        background: linear-gradient(-90deg, hsla(0, 0%, 96,0), var(--primary-color))
+    }
+    .product .products-container::after{
+        position: absolute;
+        right: 0;
+        content: "";
+        width: 24%;
+        height: 120px;
+        background: linear-gradient(90deg, hsla(0, 0%, 96,0), var(--primary-color))
+    }
+    .products .products-container .wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: calc(200px * 6);
+        animation: scroll 35s linear infinite;
+        -webkit-animation: scroll 35s linear infinite;
+    }
+    .products .products-container .wrapper .product-card {
         max-width: 200px;
     }
     .products .products-container .product-card .product-info .product-name {
@@ -198,5 +227,66 @@
     .products .banner .ourHeritage-card button{
         font-size: 0.89rem;
         padding: 0.5rem;
+    }
+}
+/* Desktop And Bigger Screen */
+@media screen and (min-width: 1023px) {
+    .products .products-container::before{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        content: "";
+        width: 24%;
+        height: 120px;
+        background: linear-gradient(-90deg, hsla(0, 0%, 96,0), var(--primary-color))
+    }
+    .product .products-container::after{
+        position: absolute;
+        right: 0;
+        content: "";
+        width: 24%;
+        height: 120px;
+        background: linear-gradient(90deg, hsla(0, 0%, 96,0), var(--primary-color))
+    }
+    .products .products-container .wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: calc(300px * 6);
+        animation: scroll 35s linear infinite;
+        -webkit-animation: scroll 35s linear infinite;
+    }
+}
+
+/* Tablet Screens */
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .products .products-container .wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: calc(300px * 6);
+        animation: scroll 35s linear infinite;
+        -webkit-animation: scroll 35s linear infinite;
+    }
+    .products .products-container .product-card .product-info .product-name {
+        font-size: 1.1rem;
+    }
+    .products .products-container .product-card .product-info .price{
+        font-size: 1.1rem;
+    }
+    .products .products-container .product-card .product-info .discount {
+        font-size: 1rem;
+    }
+    .products .products-container .product-card .img-container{
+        height: 150px;
+    }
+    .products .products-container .product-card .img-container img {
+        object-fit: contain;
+    }
+    .products .products-container .product-card .product-info .btn {
+        font-size: 0.89rem;
+        padding: 0.5rem;
+        margin-bottom: 0;
     }
 }

@@ -84,7 +84,7 @@ section p {
 }
 .cart-container .cartMenuSide button {
     all: unset;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     cursor: pointer;
 }
@@ -241,7 +241,7 @@ section p {
 }
 .search-container .search-side .search button{
     all: unset;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     cursor: pointer;
 }
@@ -343,6 +343,7 @@ section p {
     width: 100%;
 }
 .account-form form .form-control{
+
     width: 100%;
     margin-bottom: 20px;
 }
@@ -358,8 +359,16 @@ section p {
     outline: none;
     font-size: 1rem;
 }
+
 .account-form form .form-control input:focus{
     outline: 1px solid;
+}
+.account-form form .fas {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    margin: 0;
+    padding: 15px;
 }
 .account-form form .form-control button{
     background: var(--third-color);
@@ -386,6 +395,19 @@ section p {
 
 /* Mobile Phone Screen */
 @media screen and (max-width: 767px) {
+    #header .secondHeader .nav-container {
+    position: fixed;
+    top: 0;
+    background: var(--primary-color);
+    left: -100%;
+    height: 100%;
+    width: 75%;
+    transition: all 0.5s ease;
+    z-index: 99;
+}
+#header .secondHeader .nav-container.openMenu {
+    left: 0;
+}
     section{
         padding: 20px 0;
         margin-bottom: 20px;
@@ -397,5 +419,65 @@ section p {
         padding: 0;
         margin: 0;
         color: #333;
+    }
+    .cart-container .transparentSide{
+        display: none;
+    }
+    .cart-container .cartMenuSide{
+        max-width: 767px;
+        width: 100%;
+    }
+    .cart-container .carts{
+        width: 100%;
+    }
+    .cart-container .carts .product-card .img-container img{
+        object-fit: contain;
+        height: 100%;
+        aspect-ratio: 1/1;
+    }
+
+}
+/* Tablet Screens */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body{
+        overflow-x: hidden;
+    }
+    #header .secondHeader .nav-container {
+    position: fixed;
+    top: 0;
+    background: var(--primary-color);
+    left: -100%;
+    height: 100%;
+    width: 75%;
+    transition: all 0.5s ease;
+    z-index: 99;
+}
+#header .secondHeader .nav-container.openMenu {
+    left: 0;
+}
+    section{
+        padding: 25px 0;
+        margin-bottom: 25px;
+    }
+    section h2{
+        font-size: 1.65rem;
+    }
+    section p {
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+}
+
+/* Desktop And Bigger Screens */
+
+@media screen and (min-width: 1024px) {
+    .mobileMenu {
+        display: none;
+    }
+    .cart-container .cartMenuSide{
+        width: 50%;
+        min-width: 700px;
     }
 }
