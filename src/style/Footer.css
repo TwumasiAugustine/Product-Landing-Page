@@ -1,0 +1,146 @@
+footer .footer-one {
+    background: #111111;
+    color: #fff;
+}
+
+footer .footer-one ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-one ul li {
+    padding: 1rem 0;
+    font-size: 0.85rem;
+}
+
+footer .footer-one ul li i {
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+footer .footer-one ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in;
+}
+
+footer .footer-one ul li a:hover {
+    color: var(--third-color);
+}
+
+footer .footer-one .buttomNavContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 3rem 5rem;
+}
+
+footer .footer-one .buttomNavContainer h3 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--third-color);
+}
+
+footer .footer-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #2f2f2f;
+    color: var(--primary-color);
+    padding: 1rem ;
+}
+
+footer .footer-two .copyright p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+footer .footer-two span {
+    color: var(--third-color);
+}
+
+footer .footer-two a {
+    color: var(--third-color);
+    transition: all 0.4s ease-in;
+    text-decoration: underline;
+}
+
+footer .footer-two a:hover {
+    text-decoration: none;
+}
+
+footer .footer-two .nav-link ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-two .nav-link ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in;
+}
+/* Mobile and Smart Phone Screen */
+@media screen and (max-width: 767px) {
+    footer{
+        padding: 0;
+        margin: 0;
+    }
+    footer .footer-one {
+        padding: 10px;
+    }
+    footer .footer-one .buttomNavContainer{
+        flex-direction: column;
+        padding: 10px;
+    }
+    footer .footer-one .buttomNavContainer h3 {
+        font-size: 0.89rem;
+        margin: 0;
+    }
+    footer .footer-one .buttomNavContainer ul li {
+        padding: 0.2rem;
+        margin: 0;
+    }
+    footer > ul li {
+        font-size: 0.75rem;
+    }
+    footer .footer-one .buttomNavContainer  a {
+        color: #ddd;
+    }
+    footer .footer-one ul li i {
+        font-size: 0.85rem;
+        margin-right: 0.5rem;
+    }
+    footer .footer-two{
+        flex-direction: column;
+        font-size: 0.85rem;
+        padding: 10px;
+        text-align: center;
+    }
+    footer .footer-two .nav-link ul{
+        flex-wrap: wrap;
+    }
+
+    /* Tablet Screens */
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        footer .footer-two{
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

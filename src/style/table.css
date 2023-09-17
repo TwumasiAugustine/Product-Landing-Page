@@ -1,0 +1,93 @@
+.compareTable    {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+.compareTable   .product-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1200px;
+}
+.compareTable .product-table    {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+.compareTable    .product-table table tr th {
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+.compareTable    .product-table tr td img {
+    height: 80px;
+    width: 100px;
+    object-fit: cover;
+}
+.compareTable    .product-table tr td {
+    padding: 1rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 1px solid #ccc;
+    color: #000;
+}
+.compareTable    .product-table table tr td:first-child {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.compareTable    .product-table tr td button {
+    display: inline-block;
+    padding:  10px;
+    background-color: transparent;
+    color: var(--third-color);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid var(--third-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+    width: 100%;
+}
+.compareTable    .product-table tr button:hover {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+    border: 1px solid var(--third-color);
+}
+/* Mobile and Smart Phone Screens */
+@media screen and (max-width: 767px) {
+.compareTable .product-table table tr th{
+    padding: 0.5rem;
+    font-size: 0.1rem;
+}
+.compareTable .product-table  tr th img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    }
+.compareTable .product-table tr td {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+}
+.compareTable .product-table  tbody tr td:first-child{
+    font-size: 0.89rem;
+}
+.compareTable .product-table  tbody tr td button{
+    font-size: 0.75rem;
+    margin: 0;
+}
+}
