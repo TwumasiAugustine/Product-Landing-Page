@@ -462,4 +462,24 @@
         font-weight: 600;
         transition: all 0.3s ease;
     }
+
+    #header .secondHeader .nav-container nav .closeNav {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        font-size: 2.5rem;
+        display: block;
+    }
+
+    #header .secondHeader .nav-container nav {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content {
+        top: 2vh;
+        left: -100px;
+        background: transparent;
+    }
 }

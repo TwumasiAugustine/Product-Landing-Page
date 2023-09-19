@@ -411,7 +411,7 @@ section p {
 }
 
 .search-container .cards-container .card button {
-    background: var(--primary-color);
+    background: transparent;
     border: 1px solid;
     color: var(--third-color);
     font-size: 1rem;
@@ -419,7 +419,7 @@ section p {
     cursor: pointer;
     padding: 10px;
     margin-top: 10px;
-    border-radius: 3px;
+    border-radius: 5px;
     transition: all 0.4s ease;
 }
 
@@ -669,6 +669,18 @@ section p {
         padding: 0;
         color: #333;
     }
+    .user-account{
+        grid-template-columns: 1fr 2fr;
+    }
+    .cart-container .carts {
+        height: 900px;
+    }
+    .search-container{
+        grid-template-columns: 1fr 2fr;;
+    }
+    .search-container .search-list .search-products{
+        height: 900px;
+    }
 }
 
 /* Desktop And Bigger Screens */
@@ -677,5 +689,4 @@ section p {
     .mobileMenu {
         display: none;
     }
-
 }

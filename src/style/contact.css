@@ -36,7 +36,7 @@
     height: 200px;
     text-align: left;
     transition: all 0.3s ease-in;
-    border: 1px solid inherit;
+    border: 1px solid #ccc;
     box-shadow: 0 2px 13px rgba(0, 0, 0, 0.3)
 }
 
@@ -135,7 +135,7 @@ textarea::placeholder {
 }
 
 .contact .contact-container form button:hover {
-    border: 1px solid inherit;
+    border: 1px solid var(--third-color);
     background: var(--third-color);
     color: var(--primary-color);
 }

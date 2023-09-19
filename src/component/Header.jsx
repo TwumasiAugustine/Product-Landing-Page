@@ -74,7 +74,7 @@ function Header() {
                         Klassic 
                     </a>
                 </div>
-                <div className={`nav-container`}>
+                <div className='nav-container'>
                     <nav>
                         <div className="closeNav">
                             <button type="button" className="navBtn closeNav" onClick={closeNavMenu} aria-label='Close nav menu'>

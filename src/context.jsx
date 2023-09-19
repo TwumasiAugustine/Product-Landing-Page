@@ -35,7 +35,6 @@ const AppProvider = ({ children }) => {
         }
     }, [])
 
-    // Add To Favorites
     function addToWishListHandler ({ id }) {
         const existingItem = wishList.find((item) => item.id === id);
 
@@ -55,24 +54,19 @@ const AppProvider = ({ children }) => {
 
     }
 
-
-    // Remove From WishList
     function removeFromWishList (productId) {
         const updateWishList = wishList.filter((item) => item.id !== productId)
         setWishList(updateWishList)
         localStorage.setItem('wishList', JSON.stringify(updateWishList))
     }
-    // wishlist count
+
     useEffect(() => {
         setWishListCount(wishList.length)
     }, [wishList])
 
-    // Cart count
     useEffect(() => {
         setCartCount(cart.length)
     }, [cart])
-
-    // Add To Cart
 
         const addToCart = (product) => {
             const existingItem = cart.find((item) => item.id === product.id);
@@ -84,17 +78,16 @@ const AppProvider = ({ children }) => {
                 const newItem = { ...product, quantity: 1 };
                 setCart([...cart, newItem]);
             }
-            //Store the updated cart data in local storage
+
             localStorage.setItem('cart', JSON.stringify(cart));
         };
 
     const removeCart = (productId) => {
         const newCart = cart.filter((cartItem) => cartItem.id !== productId);
         setCart(newCart);
-        //Store the updated cart data in local storage
         localStorage.setItem('cart', JSON.stringify(newCart));
     };
-    // Increase Product Quantity
+
     const handleQuantityChange = (event, item) => {
         const newCart = cart.map((cartItem) => {
             if (cartItem.id === item.id) {
@@ -105,7 +98,7 @@ const AppProvider = ({ children }) => {
         });
         setCart(newCart);
     };
-    // Calculations
+    
     const calculateTotal = () => {
         const subTotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
         const tax = subTotal * 0.15;

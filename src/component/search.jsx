@@ -8,17 +8,6 @@ function SearchList () {
   const searchContainerRef = useRef(null);
   const inputRef = useRef(null)
 
-  // useEffect(() => {
-  //   const focusInput = () => {
-  //     inputRef.current.focus();
-  //   }
-    
-  //   inputRef.current.focus();
-
-  //   const focusInterval = setInterval(focusInput, 1000)
-
-  //   return () => clearInterval(focusInterval)
-  // }, [])
 
   const filterElements = productsData.filter((product) => {
     const { brand, color, category, productName: name } = product;

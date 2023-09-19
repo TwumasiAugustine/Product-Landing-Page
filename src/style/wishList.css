@@ -169,7 +169,7 @@
     color: var(--primary-color);
     background: var(--third-color);
 }
-
+/* Mobile and Smart Phones */
 @media screen and (max-width: 767px) {
     .wishList-container {
         grid-template-columns: 1fr;
@@ -187,5 +187,11 @@
 
     .wishLists .favorite-card .product-info .product-name {
         font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .wishMenuSide .wishLists{
+        height: 1000px;
     }
 }
