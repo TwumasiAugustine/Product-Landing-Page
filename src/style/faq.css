@@ -65,16 +65,19 @@
     height: 100%;
     object-fit: contain;
 }
+
 /* Smart Phone Screens */
 
 @media screen and (max-width: 767px) {
-    .faq .container{
+    .faq .container {
         padding: 1rem 2rem;
     }
-    .faq .accordion-container .accordion{
+
+    .faq .accordion-container .accordion {
         font-size: 0.89rem;
     }
-    .faq .container .sideImgContainer img{
+
+    .faq .container .sideImgContainer img {
         object-fit: contain;
         max-width: 400px;
     }
@@ -88,9 +91,11 @@
         display: flex;
         flex-direction: column;
     }
-    .faq .accordion-container{
+
+    .faq .accordion-container {
         max-width: 500px;
     }
+
     .faq .container .sideImgContainer img {
         object-fit: contain;
         max-width: 500px;

@@ -179,63 +179,76 @@ select {
     transition: all 0.4s ease;
 }
 
-.signup-container form .form-group button:hover{
+.signup-container form .form-group button:hover {
     background: #333;
 }
+
 /* Mobile Phones And Smaller Screens */
 @media screen and (max-width: 767px) {
-    .video-background .text{
+    .video-background .text {
         width: 100%;
         padding: 0 20px;
     }
-    .video-background .text h1{
+
+    .video-background .text h1 {
         font-size: 1.8re11m;
     }
-    .video-background .text p{
+
+    .video-background .text p {
         font-size: 1.2rem;
     }
-    .video-background .text .btn{
+
+    .video-background .text .btn {
         font-size: 0.89rem;
         padding: 10px;
     }
-    .signup-container{
+
+    .signup-container {
+        max-width: 340px;
         align-items: center;
         top: 1.1rem;
     }
+
     .signup-container .closeBtn {
         width: 30px;
         height: 30px;
     }
+
     .signup-container .closeBtn i {
         font-size: 1.2rem;
     }
+
     .signup-container form .form-group input,
-select,
-button {
+    select,
+    button {
         padding: 10px;
         width: 100%;
         outline: none;
         border: 1px solid;
     }
+
     .signup-container form .form-group input,
-select{
+    select {
         font-size: 1rem;
     }
+
     .signup-container form .form-group button {
-    font-size: 1rem;
-    padding: 10px;
-}
+        font-size: 1rem;
+        padding: 10px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .video-background .text{
+    .video-background .text {
         width: 100%;
         padding: 0 30px;
     }
-    .video-background .text h1{
+
+    .video-background .text h1 {
         font-size: 2rem;
     }
-    .video-background .text p{
+
+    .video-background .text p {
         font-size: 1.4rem;
     }
 }

@@ -75,9 +75,9 @@ function SearchList () {
             autoFocus
           />
           <i className="fa fa-magnifying-glass"></i>
-        </div>
-        <div className="search-products">
+          <div className="search-products">
           {searchedProducts}
+        </div>
         </div>
       </div>
     </div>

@@ -41,10 +41,9 @@ function account () {
                         <div className='transparentSide'></div>
                         <div className='account-container'>
                                 <div className='closeMenu'>
-                                <h3>LOGIN</h3>
-                                <button className='closeBtn' onClick={() => closeAccountMenu()} aria-label='Close user account menu'><i className='fa fa-close'></i></button>
-                        </div>
-                        <div className='account-container'>
+                                        <h3>LOGIN</h3>
+                                        <button className='closeBtn' onClick={() => closeAccountMenu()} aria-label='Close user account menu'><i className='fa fa-close'></i></button>
+                                </div>
                                 <div className='account-form'>
                                         <form action='#' method='post' onSubmit={handleSubmit}>
                                                 <div className='form-control'>
@@ -65,7 +64,6 @@ function account () {
                                                 <p>Forgot password? <a href='#'>Reset</a></p>
                                         </div>
                                 </div>
-                        </div>
                         </div>
                 </div>
         )

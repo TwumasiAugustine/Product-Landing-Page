@@ -12,6 +12,7 @@
     width: 900px;
     z-index: 2;
 }
+
 .testimonial .testimonial-container::before {
     position: absolute;
     left: 0;
@@ -19,13 +20,15 @@
     z-index: 1;
     width: 24%;
 }
+
 .testimonial .testimonial-container::after {
     position: absolute;
     left: 0;
     content: "";
     width: 24%;
 }
-.testimonial .testimonial-container .testimonials{
+
+.testimonial .testimonial-container .testimonials {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +36,7 @@
     width: calc(300px * 3);
     animation: testScroll 10s linear infinite;
 }
+
 .testimonial .testimonial-container .testimonial-card {
     display: flex;
     flex-direction: column;
@@ -93,21 +97,22 @@
     text-align: center;
     color: var(--primary-color);
 }
-.subscribe #form{
+
+.subscribe {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.subscribe #form {
+    width: 100%;
+    max-width: 700px;
     padding: 1rem;
     background-color: var(--primary-color);
-    max-width: 650px;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
 }
 
-.subscribe  #form input {
-    display: block;
+.subscribe #form input {
     padding: 1rem;
     background-color: transparent;
     font-size: 1rem;
@@ -115,7 +120,6 @@
     border: 1px solid var(--third-color);
     border-radius: 25px;
     transition: all 0.3s ease;
-    margin: 1rem 0;
     width: 100%;
 }
 
@@ -129,12 +133,11 @@
 }
 
 .subscribe #form button {
-    position: relative;
-    top: -68px;
-    right: -41%;
+    position: absolute;
+    top: 16px;
+    right: 16px;
     width: fit-content;
-    display: block;
-    padding:  1rem;
+    padding: 1rem;
     background-color: var(--third-color);
     color: var(--primary-color);
     font-size: 1rem;
@@ -145,8 +148,9 @@
     transition: all 0.3s ease;
 }
 
-.subscribe #form button:hover{
-    opacity: 0.8;
+.subscribe #form button:hover {
+    background-color: #a3500ce5;
+    ;
 }
 
 .subscribe #form button i {
@@ -156,13 +160,10 @@
 .downloadApp-container {
     padding: 1rem;
     background-color: var(--primary-color);
-    max-width: 650px;
-    margin: 0 auto;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
 }
 
 .downloadApp a {
@@ -190,15 +191,17 @@
     color: var(--third-color);
     border: 1px solid var(--third-color);
 }
+
 @media screen and (max-width: 767px) {
-    .testimonial .testimonial-container{
+    .testimonial .testimonial-container {
         display: flex;
-        margin: auto;
+        margin: 20px auto;
         height: auto;
         overflow: hidden;
         align-items: center;
     }
-    .testimonial .testimonial-container::before{
+
+    .testimonial .testimonial-container::before {
         position: absolute;
         z-index: 1;
         left: 0;
@@ -206,13 +209,15 @@
         width: 24%;
         height: 120px;
     }
-    .testimonial .testimonial-container::after{
+
+    .testimonial .testimonial-container::after {
         position: absolute;
         left: 0;
         content: "";
         width: 24%;
         height: 120px;
     }
+
     .testimonial .testimonial-container .testimonials {
         display: flex;
         gap: 20px;
@@ -220,60 +225,90 @@
         -webkit-animation: scroll2 15s linear infinite;
         width: calc(200px * 3);
     }
+
     @keyframes scroll2 {
-        0%{
+        0% {
             -webkit-transform: translateX(0);
             transform: translateX(0)
         }
-        100%{
+
+        100% {
             -webkit-transform: translateX(calc(-200px * 3));
             transform: translateX(calc(-200px * 3));
         }
     }
-    .testimonial .testimonial-container .testimonials .testimonial-card{
+
+    .testimonial .testimonial-container .testimonials .testimonial-card {
         padding: 0.5rem;
         margin: 10px 0;
         width: 250px;
         height: fit-content;
     }
-    .testimonial .testimonial-container .testimonials .testimonial-card .testimonial-info{
+
+    .testimonial .testimonial-container .testimonials .testimonial-card .testimonial-info {
         padding: 0.5rem;
         gap: 0.3rem;
     }
-    .testimonial .testimonial-container .testimonial-card .testimonial-img{
+
+    .testimonial .testimonial-container .testimonial-card .testimonial-img {
         top: -13px;
         width: 40px;
         height: 40px;
     }
-    .testimonial .testimonial-container .testimonial-card .testimonial-info p{
+
+    .testimonial .testimonial-container .testimonial-card .testimonial-info p {
         font-size: 0.74rem;
         text-align: center;
     }
-    .testimonial .testimonial-container .testimonial-card .testimonial-info h3{
+
+    .testimonial .testimonial-container .testimonial-card .testimonial-info h3 {
         font-size: 0.89rem;
     }
-    .subscribe #form{
-        padding: 0.8rem;
+
+    .subscribe #form {
         width: 100%;
         margin: 0;
     }
-    .subscribe #form input{
-        padding: 0.8rem 1rem;
-        width: 100%;
-        max-width: 450px;
-    }
-    .subscribe #form button{
-        top: -60.1px;
-        right: -167px;
+
+    .subscribe #form input {
         padding: 0.8rem;
-        font-size: 0.85rem;
+        width: 100%;
     }
-    .downloadApp a{
+
+    .subscribe #form button {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .downloadApp a {
         padding: 0.6rem;
         margin: 0 1rem;
         font-size: 0.89rem;
     }
+
     .downloadApp a i {
         font-size: 0.85rem;
+    }
+}
+
+/* Tablet Screen */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .testimonial .testimonial-container .testimonials {
+        animation: scroll2 15s linear infinite;
+        -webkit-animation: scroll2 15s linear infinite;
+        width: calc(300px * 3);
+    }
+
+    @keyframes scroll2 {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+
+        100% {
+            -webkit-transform: translateX(calc(-300px * 3));
+            transform: translateX(calc(-300px * 3));
+        }
     }
 }

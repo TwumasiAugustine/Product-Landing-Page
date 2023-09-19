@@ -229,7 +229,7 @@
     gap: 1rem;
 }
 
-#header .secondHeader .nav-container nav .closeNav{
+#header .secondHeader .nav-container nav .closeNav {
     display: none;
 }
 
@@ -295,57 +295,70 @@
     top: 0;
     z-index: 99;
 }
+
 /* Mobile Phone Screen */
 @media screen and (max-width: 767px) {
-    body{
+    body {
         overflow-x: hidden;
     }
-    #header .firstHeader{
+
+    #header .firstHeader {
         padding: 0 10px;
     }
-    #header .firstHeader .social-media{
+
+    #header .firstHeader .social-media {
         width: fit-content;
     }
+
     #header .firstHeader .social-media a i {
         font-size: 1rem;
     }
-    #header .firstHeader .randomText  p{
+
+    #header .firstHeader .randomText p {
         font-size: 12px;
     }
-    #header .firstHeader .hoverDropdown{
+
+    #header .firstHeader .hoverDropdown {
         margin-right: 10px;
     }
-    #header .firstHeader .hoverDropdown .dropdown .dropbtn{
+
+    #header .firstHeader .hoverDropdown .dropdown .dropbtn {
         font-size: 12px;
         margin: 0;
     }
-    
-    #header .firstHeader .hoverDropdown .dropdown .dropbtn i{
+
+    #header .firstHeader .hoverDropdown .dropdown .dropbtn i {
         font-size: 12px;
     }
-    
-    #header .firstHeader .hoverDropdown .dropdown .dropdown-content a{
+
+    #header .firstHeader .hoverDropdown .dropdown .dropdown-content a {
         font-size: 12px;
     }
-    #header .secondHeader{
+
+    #header .secondHeader {
         justify-content: space-between;
         margin: 0;
         padding: 0 20px;
     }
-    #header .secondHeader .navBtn{
+
+    #header .secondHeader .navBtn {
         all: unset;
         font-size: 1.5rem;
         cursor: pointer;
         outline: none;
     }
+
     #header .secondHeader .logo a {
         font-size: 18px;
     }
-    #header .secondHeader .logo a img{
+
+    #header .secondHeader .logo a img {
         width: 2rem;
         height: 2rem;
+        margin-right: 0;
     }
-    #header .secondHeader .nav-container nav{
+
+    #header .secondHeader .nav-container nav {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -353,38 +366,46 @@
         width: 100%;
         padding: 50px 0;
     }
-    #header .secondHeader .nav-container nav .closeNav{
+
+    #header .secondHeader .nav-container nav .closeNav {
         position: absolute;
         top: 0;
         right: 5px;
         display: block;
     }
+
     #header .secondHeader .nav-icons {
         align-items: center;
         justify-content: center;
         gap: 15px;
     }
-    #header .secondHeader .nav-icons button{
+
+    #header .secondHeader .nav-icons button {
         padding: 0;
     }
-    #header .secondHeader .nav-icons button i{
+
+    #header .secondHeader .nav-icons button i {
         font-size: 1.2rem;
     }
-    #header .secondHeader .nav-icons .cart .notification{
+
+    #header .secondHeader .nav-icons .cart .notification {
         width: 15px;
         height: 15px;
         font-size: 0.68rem;
     }
-    #header .secondHeader .nav-icons .wishList .notification{
+
+    #header .secondHeader .nav-icons .wishList .notification {
         width: 15px;
         height: 15px;
         font-size: 0.68rem;
     }
-    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropbtn{
+
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropbtn {
         font-size: 1rem;
         margin-bottom: 10px;
     }
-    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content{
+
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content {
         display: none;
         position: relative;
         top: 0;
@@ -395,25 +416,30 @@
         width: 100%;
         background: #fffffff6;
     }
-    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content .list{
+
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content .list {
         width: 100%;
         padding: 0;
         margin: 0;
     }
-        #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul{
+
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul {
         margin: 0;
         padding: 0;
         width: 100%;
     }
-    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li{
+
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li {
         margin: 0;
         padding: 3px;
         text-align: center;
     }
-    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li a{
+
+    #header .secondHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li a {
         width: 100%;
     }
 }
@@ -423,15 +449,17 @@
     #header .firstHeader .social-media a i {
         font-size: 1.2rem;
     }
-    #header .secondHeader .navBtn{
+
+    #header .secondHeader .navBtn {
         all: unset;
         font-size: 1.8rem;
         cursor: pointer;
         outline: none;
     }
+
     #header .secondHeader .nav-icons i {
-    font-size: 1.2rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
 }

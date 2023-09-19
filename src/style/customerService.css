@@ -48,31 +48,37 @@
 }
 
 @media screen and (max-width: 767px) {
-    .customerService .customerServiceContainer{
+    .customerService .customerServiceContainer {
         width: 100%;
         gap: 5px;
         padding: 0;
         margin: 0;
     }
-        .customerService .customerServiceContainer .customerServiceBox{
-            max-width: 150px;
-            padding: 5px;
-        }
-    .customerService .customerServiceContainer .customerServiceBox .customerServiceIcon .fas{
+
+    .customerService .customerServiceContainer .customerServiceBox {
+        max-width: 150px;
+        padding: 5px;
+    }
+
+    .customerService .customerServiceContainer .customerServiceBox .customerServiceIcon .fas {
         font-size: 1.2rem;
     }
-    .customerService .customerServiceContainer .customerServiceBox .customerServiceText h3{
+
+    .customerService .customerServiceContainer .customerServiceBox .customerServiceText h3 {
         font-size: 1rem;
     }
-    .customerService .customerServiceContainer .customerServiceBox .customerServiceText p{
+
+    .customerService .customerServiceContainer .customerServiceBox .customerServiceText p {
         font-size: 0.87rem;
     }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .customerService .customerServiceContainer .customerServiceBox .customerServiceIcon .fas{
+    .customerService .customerServiceContainer .customerServiceBox .customerServiceIcon .fas {
         font-size: 1.5rem;
     }
-    .customerService .customerServiceContainer .customerServiceBox .customerServiceText h3{
+
+    .customerService .customerServiceContainer .customerServiceBox .customerServiceText h3 {
         font-size: 1.2rem;
     }
 }

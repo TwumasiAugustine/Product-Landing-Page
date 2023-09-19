@@ -94,25 +94,27 @@ function Products() {
                             cart.map((item) => (
                                 <div className={`product-card`} key={item.id}>
                                     <div className="img-container">
-                                        <button onClick={() => removeCart(item.id)} aria-label='Remove from cart'>
-                                            <i className="fa fa-close"></i>
-                                        </button>
                                         <img src={`./images/${item.image}`} alt="watch" loading="lazy"/>
                                     </div>
                                     <div className="product-info">
                                         <p className="product-name">{item.productName}</p>
-                                        <div className="priQty">
+                                        <p className='brand'>{ item.brand}</p>
                                             <span className="price">$ {(item.price * item.quantity).toFixed(2)}</span>
+                                        <div className="priQty">
                                             <label htmlFor="quantity">
-                                                Qty
+                                                Qty 
                                                 <input
                                                     type="number"
                                                     value={item.quantity}
                                                     name="quantity"
                                                     id="quantity"
                                                     onChange={(e) => handleQuantityChange(e, item)}
+                                                    min={1}
                                                 />
                                             </label>
+                                            <button onClick={() => removeCart(item.id)} aria-label='Remove from cart'>
+                                            Remove
+                                        </button>
                                         </div>
                                     </div>
                                 </div>

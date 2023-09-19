@@ -71,7 +71,7 @@ function Header() {
                 <div className="logo">
                     <a href="#">
                         <img src={Logo} alt="Klassic watches" />
-                        Klassic Watches
+                        Klassic 
                     </a>
                 </div>
                 <div className={`nav-container`}>

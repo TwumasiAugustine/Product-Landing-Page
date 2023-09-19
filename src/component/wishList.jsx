@@ -25,24 +25,28 @@ function WishList () {
                         </div>
                     ) : (
                         wishList.map((product) => {
-                            const {id, image, productName: name, price, discount } = product
+                            const {id, image, productName: name, price, discount, category, brand } = product
                             return (
                                 <div className="favorite-card" key={id}>
                                     <div className="img-container">
-                                        <button onClick={() => removeFromWishList(product.id)} aria-label='Remove from cart'>
-                                            <i className="fa fa-close"></i>
-                                        </button>
                                         <img src={`./images/${image}`} alt={name} loading="lazy"/>
                                     </div>
                                     <div className="product-info">
                                         <p className="product-name">{name}</p>
+                                        <p className='category'>{category}</p>
+                                        <p className='brand'>{brand}</p>
                                         <div className="cost-container">
                                             <span className="price">$ {price}</span>
                                             <span className="discount">
                                                 $ <del>{discount}</del>
                                             </span>
                                         </div>
-                                        <button className="btn" onClick={() => addToCart(product)} aria-label='Add to cart'>Add To Cart</button>
+                                        <div className="btn-container">
+                                            <button className="btn" onClick={() => addToCart(product)} aria-label='Add to cart'>Add To Cart</button>
+                                            <button onClick={() => removeFromWishList(product.id)} aria-label='Remove from cart' className='delete'>
+                                                Remove
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             );
