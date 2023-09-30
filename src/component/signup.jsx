@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import 'animate.css'
 
 function SignUp() {
-//   After 3s onload translate signup container
+
     useEffect(() => {
         const signupContainer = document.querySelector('.signup-container');
         setTimeout(() => {
@@ -10,31 +10,27 @@ function SignUp() {
             signupContainer.classList.add('animate__animated', 'animate__fadeInLeft')
         }, 3000);
     }, [])
-//   Close Signup
+
     const closeSignUp = () => {
         const signupContainer = document.querySelector('.signup-container');
         signupContainer.classList.add('close')
     }
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [select, setSelect] = useState('')
+    const [signUpData, setSignUpData] = useState(
+        {fullName: "", email: "", select: ""}
+    )
 
-    const handleNameChange = (event) => {
-        setName(event.target.value)
+    const handleDataChange = (event) => {
+        const {name, value} = event.target
+        setSignUpData(prevFormData => {
+            return {
+                ...prevFormData,
+                [name] : value
+            }
+        })
     }
     
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value)
-    }
-    
-    const handleSelectChange = (event) => {
-        setSelect(event.target.value)
-    }
     const  handleSubmit = (e) => {
         e.preventDefault()
-        setName('')
-        setEmail('')
-        setSelect('')
     }
 
     return(
@@ -48,17 +44,19 @@ function SignUp() {
             </button>
             <form method="post" action="#" onSubmit={handleSubmit}>
             <div className="form-group" >
-                <input type='text' id='name1' placeholder='Name' onChange={handleNameChange} value={name} required/>
+                    <input type='text' id='name1' placeholder='Name' name='fullName'
+                        onChange={handleDataChange} value={signUpData.fullName} required />
                 <label htmlFor='name'>Name</label>
             </div>
             <div className="form-group" >
-                    <input type='email' id='email1' placeholder='Email' value={ email} onChange={handleEmailChange} required/>
+                    <input type='email' id='email1' placeholder='Email' name='email'
+                        onChange={handleDataChange} value={signUpData.email} required />
                 <label htmlFor='email'>Email</label>
             </div>
             <div className="form-group" >
-                <select type='select' id='select' onChange={handleSelectChange} value={select} required>
+                <select type='select' id='select' onChange={handleDataChange} name="select" value={signUpData.select} required>
                     <optgroup>
-                        <option value='Select your interest'>Select your interest</option>
+                        <option value=''>Select your interest</option>
                         <option value='Wrist Watches'>Wrist Watches</option>
                         <option value='Pocket / Pendant Watches'>Pocket / Pendant Watches</option>
                     </optgroup>

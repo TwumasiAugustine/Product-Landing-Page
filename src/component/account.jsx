@@ -2,26 +2,30 @@
 import React, {useState} from 'react'
 
 function account () {
-        const [email, setEmail] = useState('')
-        const [password, setPassword] = useState('')
+        const [formData, setFormData] = useState(
+                {email: "", password: ""}
+        )
+
+        
+        const handleChange = (event) => {
+                const {name, value} = event.target
+                setFormData(prevFormData => {
+                        return {
+                                ...prevFormData,
+                                [name]: value
+                        }
+                })
+        }
 
         function handleSubmit (e) {
                 e.preventDefault()
-        }
-
-        const handleEmailChange = (event) => {
-                setEmail(event.target.value)
-        }
-
-        const handlePasswordChange = (event) => {
-                setPassword(event.target.value)
         }
 
         const closeAccountMenu = () => {
                 const accountMenu = document.querySelector('.user-account')
                 accountMenu.classList.remove('open')
         }
-        // Password Visibility
+
         function togglePassWordVisibility() {
                 const passwordInput = document.querySelector('#password')
                 const togglePassword = document.querySelector('.fas')
@@ -42,19 +46,24 @@ function account () {
                         <div className='account-container'>
                                 <div className='closeMenu'>
                                         <h3>LOGIN</h3>
-                                        <button className='closeBtn' onClick={() => closeAccountMenu()} aria-label='Close user account menu'><i className='fa fa-close'></i></button>
+                                        <button className='closeBtn' onClick={() => closeAccountMenu()}
+                                                aria-label='Close user account menu'>
+                                                <i className='fa fa-close'></i>
+                                        </button>
                                 </div>
                                 <div className='account-form'>
                                         <form action='#' method='post' onSubmit={handleSubmit}>
                                                 <div className='form-control'>
                                                         <label htmlFor='email2'>Email</label>
-                                                        <input type='email' id='email2' placeholder='Enter email' onChange={handleEmailChange} value={email}  required/>
+                                                        <input type='email' id='email2' placeholder='Enter email'
+                                                        onChange={handleChange} name="email" value={formData.email} required />
                                                 </div>
                                                 <div className='form-control'>
                                                         <label htmlFor='password'>Password</label>
-                                                                <input type='password' id='password' placeholder='Enter password' required autoComplete='current password' value={password} onChange={handlePasswordChange}/> 
-                                                                <i className='fas fa-eye' onClick={togglePassWordVisibility}></i> 
-                                                        </div>
+                                                        <input type='password' id='password' placeholder='Enter password'
+                                                        required name="password" value={formData.password} onChange={handleChange} /> 
+                                                        <i className='fas fa-eye' onClick={togglePassWordVisibility}></i> 
+                                                </div>
                                                 <div className='form-control'>
                                                         <button type='submit' aria-label='Submit' tabIndex={0}>SIGN IN</button>
                                                 </div>

@@ -2,26 +2,22 @@ import React, {useState} from "react";
 import '../style/contact.css';
 
 function Contact() {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
-
-    const handleNameChange = (event) => {
-        setName(event.target.value)
+    const [formData, setFormData] = useState(
+        {fullName: "", email: "", message: ""}
+    )
+    
+    const handleFormDataChange = (event) => {
+        const {name, value} = event.target
+        setFormData(prevFormData => {
+            return {
+                ...prevFormData,
+                [name]: value
+            }
+        })
     }
 
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value)
-    }
-
-    const handleMessage = (event) => {
-        setMessage(event.target.value)
-    }
     const handleSubmit = (e) => {
         e.preventDefault()
-        setName('')
-        setEmail('')
-        setMessage('')
     }
 
     return(
@@ -59,13 +55,14 @@ function Contact() {
                 <div className='contact-form'>
                     <form action="#" onSubmit={handleSubmit}>
                         <div className='form-group'>
-                            <input type='text' id='name' name='name' placeholder='Enter your name' onChange={handleNameChange} value={ name} aria-label="Name" autoComplete="Current Name"/>
+                            <input type='text' id='fullName' placeholder='Enter your name' onChange={handleFormDataChange} name="fullName" aria-label="fullName" value={formData.fullName}/>
                         </div>
                         <div className='form-group'>
-                            <input type='email' id='email' name='email' placeholder='Enter your email' onChange={handleEmailChange} value={email} aria-label="Email" autoComplete='Current Email'/>
+                            <input type='email' id='email' name='email' placeholder='Enter your email' onChange={handleFormDataChange}  aria-label="Email" value={formData.email}/>
                         </div>
                         <div className='form-group'>
-                            <textarea id='message' name='message' placeholder='Enter your message' onChange={handleMessage} value={message} aria-label="Message"></textarea>
+                            <textarea id='message' name='message' placeholder='Enter your message'
+                                onChange={handleFormDataChange} aria-label="Message" value={formData.message}/>
                         </div>
                         <button type='submit' aria-label="Submit" tabIndex={0}>Submit</button>
                     </form>
