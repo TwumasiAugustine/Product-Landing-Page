@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import productsData from './data/product.json';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AppContext = React.createContext()
 
@@ -35,6 +37,26 @@ const AppProvider = ({ children }) => {
         }
     }, [])
 
+    const addToWishListNotify = () => {
+        toast.success('Added to Wishlist', {
+            position: 'top-right',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            progress: undefined,
+            draggable: true
+        });
+    }
+
+    const removeFromWishListNotify = () => {
+        toast.error('Removed from Wishlist', {
+            position: 'top-right',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            progress: undefined,
+        });
+    }
     function addToWishListHandler ({ id }) {
         const existingItem = wishList.find((item) => item.id === id);
 
@@ -68,15 +90,37 @@ const AppProvider = ({ children }) => {
         setCartCount(cart.length)
     }, [cart])
 
+    const addNotify = () => {
+        toast.success('Added to Cart', {
+            position: 'top-right',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            progress: undefined,
+            draggable: true
+        });
+    }
+
+    const removeNotify = () => {
+        toast.error('Removed from Cart', {
+            position: 'top-right',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            progress: undefined,
+        });
+    }
         const addToCart = (product) => {
             const existingItem = cart.find((item) => item.id === product.id);
             if (existingItem) {
                 const updateItem = { ...existingItem, quantity: existingItem.quantity + 1 };
                 const updatedCart = cart.map((item) => (item.id === existingItem.id ? updateItem : item));
                 setCart(updatedCart);
+                addNotify()
             } else {
                 const newItem = { ...product, quantity: 1 };
                 setCart([...cart, newItem]);
+                addNotify()
             }
 
             localStorage.setItem('cart', JSON.stringify(cart));
@@ -85,6 +129,7 @@ const AppProvider = ({ children }) => {
     const removeCart = (productId) => {
         const newCart = cart.filter((cartItem) => cartItem.id !== productId);
         setCart(newCart);
+        removeNotify()
         localStorage.setItem('cart', JSON.stringify(newCart));
     };
 
@@ -113,23 +158,30 @@ const AppProvider = ({ children }) => {
         cartSlideOff.classList.remove('cartOpen');
     };
     return (
-        <AppContext.Provider value={{
-            closeCartMenu,
-            handleQuantityChange,
-            removeCart, addToCart,
-            productsData: updateProductData,
-            cart, subTotal,
-            tax, total,
-            addToWishListHandler,
-            removeFromWishList,
-            cartCount,
-            wishList,
-            wishListCount,
-            isFilled
-        }}>
-            {children}
-        </AppContext.Provider>
-    )
+		<AppContext.Provider
+			value={{
+				closeCartMenu,
+				handleQuantityChange,
+				removeCart,
+				addToCart,
+				productsData: updateProductData,
+				cart,
+				subTotal,
+				tax,
+				total,
+				addToWishListHandler,
+				removeFromWishList,
+				cartCount,
+				wishList,
+				wishListCount,
+				isFilled,
+				ToastContainer,
+				removeFromWishListNotify,
+				addToWishListNotify
+			}}>
+			{children}
+		</AppContext.Provider>
+	);
 }
 
 export const useGlobalContext = () => {

@@ -55,10 +55,16 @@ function Contact() {
                 <div className='contact-form'>
                     <form action="#" onSubmit={handleSubmit}>
                         <div className='form-group'>
-                            <input type='text' id='fullName' placeholder='Enter your name' onChange={handleFormDataChange} name="fullName" aria-label="fullName" value={formData.fullName}/>
+                            <input type='text' id='fullName' placeholder='Enter your name'
+                                onChange={handleFormDataChange}
+                                name="fullName" aria-label="fullName" value={formData.fullName} />
                         </div>
                         <div className='form-group'>
-                            <input type='email' id='email' name='email' placeholder='Enter your email' onChange={handleFormDataChange}  aria-label="Email" value={formData.email}/>
+                            <input type='email' id='email' name='email' placeholder='Enter your email'
+                                onChange={handleFormDataChange}
+                                aria-label="Email" value={formData.email}
+                                autoComplete='current-password'
+                            />
                         </div>
                         <div className='form-group'>
                             <textarea id='message' name='message' placeholder='Enter your message'

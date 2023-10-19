@@ -1,34 +1,34 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 function CollectionNav () {
 
     return (
-        <div className='list'>
-            <ul>
-                <li>
-                    <a href='#'>Automatic & Mechanical</a>
-                </li>
-                <li>
-                    <a href='#'>Elegance</a>
-                </li>
-                <li>
-                    <a href='#'>Diamond</a>
-                </li>
-                <li>
-                    <a href='#'>Gold Watch</a>
-                </li>
-                <li>
-                    <a href='#'>Pendant Watch</a>
-                </li>
-                <li>
-                <a href='#'>Pocket Watch</a>
-            </li>
-            <li>
-                <a href='#'>Wall Clock</a>
-            </li>
-        </ul>
-    </div>
-    )
+		<div className='list'>
+			<ul>
+				<li>
+					<Link to='/page/collection'>Automatic & Mechanical</Link>
+				</li>
+				<li>
+					<Link to='/page/collection'>Elegance</Link>
+				</li>
+				<li>
+					<Link to='/page/collection'>Diamond</Link>
+				</li>
+				<li>
+					<Link to='/page/collection'>Gold Watch</Link>
+				</li>
+				<li>
+					<Link to='/page/collection'>Pendant Watch</Link>
+				</li>
+				<li>
+					<Link to='/page/collection'>Pocket Watch</Link>
+				</li>
+				<li>
+					<Link to='/page/collection'>Wall Clock</Link>
+				</li>
+			</ul>
+		</div>
+	);
 }
 
 export default CollectionNav;

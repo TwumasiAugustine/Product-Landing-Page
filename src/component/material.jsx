@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function MaterialNav(){
 
@@ -6,16 +7,16 @@ function MaterialNav(){
         <div className='list'>
             <ul>
                 <li>
-                    <a href='#'>Bracelet Watches</a>
+                    <Link to='/page/collection'>Bracelet Watches</Link>
                 </li>
                 <li>
-                    <a href='#'>Leather Strap Watches</a>
+                    <Link to='/page/collection'>Leather Strap Watches</Link>
                 </li>
                 <li>
-                    <a href='#'>Bracelet Watches</a>
+                    <Link to='/page/collection'>Bracelet Watches</Link>
                 </li>
                 <li>
-                    <a href='#'>Half bangle Watches</a>
+                    <Link to='/page/collection'>Half bangle Watches</Link>
                 </li>
             </ul>
         </div>

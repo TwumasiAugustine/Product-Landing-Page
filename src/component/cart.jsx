@@ -1,15 +1,20 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { useGlobalContext } from '../context'
 
 const Cart = () => {
-    const { removeCart, closeCartMenu, cart, handleQuantityChange, total, subTotal, tax } = useGlobalContext();
+    const { removeCart, cart, handleQuantityChange, total, subTotal, tax } = useGlobalContext();
+    const closeCart = () => {
+        const cartContainer = document.querySelector('.cart-container');
+        cartContainer.classList.remove('cartOpen');
+    }
     return(
         <div className="cart-container">
                 <div className="transparentSide"></div>
                 <div className="cartMenuSide">
                     <div className="cartMenu">
                         <h3>Cart List</h3>
-                        <button className="closeBtn" onClick={() => closeCartMenu()} aria-label='Close button'>
+                    <button className="closeBtn" onClick={closeCart} aria-label='Close button'>
                             <i className="fa fa-close"></i>
                         </button>
                     </div>

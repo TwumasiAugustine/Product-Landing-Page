@@ -7,13 +7,13 @@ function Styles() {
         <div className='list'>
             <ul>
                 <li>
-                    <a href='#'>Dress Watches</a>
+                    <a to='/page/collection'>Dress Watches</a>
                 </li>
                 <li>
-                    <a href='#'>Fashion Watches</a>
+                    <a to='/page/collection'>Fashion Watches</a>
                 </li>
                 <li>
-                    <a href='#'>Nurses Watches</a>
+                    <a to='/page/collection'>Nurses Watches</a>
                 </li>
             </ul>
         </div>

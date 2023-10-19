@@ -46,11 +46,11 @@ function SignUp() {
             <div className="form-group" >
                     <input type='text' id='name1' placeholder='Name' name='fullName'
                         onChange={handleDataChange} value={signUpData.fullName} required />
-                <label htmlFor='name'>Name</label>
+                <label htmlFor='name1'>Name</label>
             </div>
             <div className="form-group" >
-                    <input type='email' id='email1' placeholder='Email' name='email'
-                        onChange={handleDataChange} value={signUpData.email} required />
+                <input type='email' id='email1' placeholder='Email' name='email'
+                    onChange={handleDataChange} value={signUpData.email} autoComplete='yes' required />
                 <label htmlFor='email'>Email</label>
             </div>
             <div className="form-group" >

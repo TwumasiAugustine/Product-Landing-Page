@@ -143,8 +143,8 @@
 
 .wishLists .favorite-card .product-info .btn,
 .delete {
+    width: -moz-fit-content; 
     width: fit-content;
-    padding: 10px;
     text-transform: uppercase;
     font-size: 0.57rem;
     background: transparent;
@@ -164,6 +164,7 @@
     color: var(--primary-color);
     border: 1px solid #f15c5c;
 }
+
 
 .wishLists .favorite-card .product-info .btn:hover {
     color: var(--primary-color);

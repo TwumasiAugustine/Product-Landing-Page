@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "development",
+    "recommended",
+    "legacy",
+    "latest",
+    "latest/mozilla",
+    "latest/jest",
+    "latest/node",
+    "latest/node-script"
+  ]
+}
