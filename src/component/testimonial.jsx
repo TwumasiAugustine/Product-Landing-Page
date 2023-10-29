@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef} from 'react';
 import 'animate.css';
 import data from '../data/testimonial.json';
-import '../style/testimonial.css';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '../style/testimonial.css'; 
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 function Testimonial() {
@@ -17,17 +17,40 @@ function Testimonial() {
 		e.preventDefault();
 	};
 
-	useEffect(() => {
-		new Splide(testimonialRef.current, {
-			type: 'loop',
-			perPage: 1,
-			autoplay: true,
-			pauseOnHover: true,
-			resetProgress: false,
-			arrows: false,
-			pagination: false
-		})
-	}, []);
+	const options = {
+		type: 'loop',
+		gap: '1rem',
+		drag: 'free',
+		autoplay: true,
+		pauseOnHover: true,
+		resetProgress: false,
+		perPage: 1,
+		perMove: 1,
+		arrows: true,
+		pagination: false,
+		lazyLoad: 'nearby',
+		height: 'auto',
+		breakpoints: {
+			640: {
+				perPage: 3,
+				perMove: 1,
+				height: 'auto',
+				arrows: false
+			},
+			768: {
+				perPage: 3,
+				perMove: 1,
+				height: 'auto',
+				arrows: false
+			},
+			1024: {
+				perPage: 3,
+				perMove: 1,
+				height: 'auto'
+			}
+		}
+	};
+
 
 	return (
 		<div>
@@ -36,8 +59,8 @@ function Testimonial() {
 				<p className='short-info'>
 					Our customers are happy with our products
 				</p>
-				<div className='splide__track'>
-					<ul className='splide__list'>
+				<Splide options={options}>
+					<SplideTrack>
 						{data.map((item) => (
 							<SplideSlide key={item.id}>
 								<div className='testimonial-card'>
@@ -62,12 +85,12 @@ function Testimonial() {
 								</div>
 							</SplideSlide>
 						))}
-					</ul>
-				</div>
+					</SplideTrack>
+				</Splide>
 			</section>
+			<div className='subscribe'>
 			<h2>Subscribe to Get Updates</h2>
 			<p className='short-info'>Subscribe to get updates from us</p>
-			<div className='subscribe'>
 				<form action='#' id='form' onSubmit={handleSubmit}>
 					<input
 						type='email'
@@ -82,7 +105,7 @@ function Testimonial() {
 						type='submit'
 						value={emailValue}
 						aria-label='Subscribe'>
-						Subscribe <i className='fa fa-paper-plane'></i>
+						Subscribe
 					</button>
 				</form>
 			</div>

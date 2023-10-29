@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const account = () => {
+const account = ({openAccMenu, openAccountMenu}) => {
 	const [formData, setFormData] = useState({ email: '', password: '' });
-
 	const handleChange = (event) => {
 		const { name, value } = event.target;
 		setFormData((prevFormData) => {
@@ -16,6 +16,7 @@ const account = () => {
 
 	function handleSubmit(e) {
 		e.preventDefault();
+		setFormData()
 	}
 
 	function togglePassWordVisibility() {
@@ -33,20 +34,16 @@ const account = () => {
 		}
 	}
 
-	const closeAccountMenu = () => {
-		const accountMenu = document.querySelector('.user-account');
-		accountMenu.classList.remove('open');
-	}
 	
 	return (
-		<div className='user-account'>
-			<div className='transparentSide'></div>
+		<div className={`user-account ${openAccMenu ? 'open': ''}`}>
+			<div className='transparentSide' onClick={openAccountMenu}></div>
 			<div className='account-container'>
 				<div className='closeMenu'>
 					<h3>LOGIN</h3>
 					<button
 						className='closeBtn'
-						onClick={closeAccountMenu}
+						onClick={openAccountMenu}
 						aria-label='Close user account menu'>
 						<i className='fa fa-close'></i>
 					</button>
@@ -59,7 +56,7 @@ const account = () => {
 								type='email'
 								id='email2'
 								placeholder='Enter email'
-								autoComplete='yes'
+								autoComplete='on'
 								onChange={handleChange}
 								name='email'
 								value={formData.email}
@@ -93,7 +90,7 @@ const account = () => {
 					</form>
 					<div className='acc-info'>
 						<p>
-							Don't have an account? <a href='#'>Sign up</a>
+							Don't have an account? <Link to='/page/createAcc'>Sign up</Link>
 						</p>
 						<p>
 							Forgot password? <a href='#'>Reset</a>

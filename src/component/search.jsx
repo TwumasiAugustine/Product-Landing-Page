@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { useGlobalContext } from '../context';
 
-const SearchList = () => {
+const SearchList = ({openSearch, openSearchMenu}) => {
 	const { productsData, addToCart } = useGlobalContext();
 	const [search, setSearch] = useState('');
 	const searchContainerRef = useRef(null);
@@ -56,19 +56,16 @@ const SearchList = () => {
 			</div>
 		);
 	});
-	const closeSearch = () => {
-		const searchContainer = searchContainerRef.current;
-		searchContainer.classList.remove('searchOpen');
-	};
+	
 	return (
-		<div className='search-container' ref={searchContainerRef}>
-			<div className='transparent-side'></div>
+		<div className={`search-container ${openSearch ? 'open' : ''}`} ref={searchContainerRef}>
+			<div className='transparent-side' onClick={openSearchMenu}></div>
 			<div className='search-side'>
 				<div className='search'>
 					<h3>Search our Site</h3>
 					<button
 						className='close'
-						onClick={closeSearch}
+						onClick={openSearchMenu}
 						aria-label='Close'>
 						<i className='fa fa-close'></i>
 					</button>

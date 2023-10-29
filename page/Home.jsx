@@ -1,7 +1,6 @@
 import React from 'react';
 import Table from '../src/component/table';
 import ChooseUs from '../src/component/chooseUs';
-import Cart from '../src/component/cart';
 import 'animate.css';
 import '../src/style/product.css';
 
@@ -10,6 +9,7 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 const Home = () => {
+
 	const {
 		productsData,
 		addToCart,
@@ -46,13 +46,13 @@ const Home = () => {
 		height: '300px',
 		breakpoints: {
 			640: {
-				perPage: 3,
-				perMove: 1,
+				perPage: 2,
+				perMove: 2,
 				height: 'auto',
 				arrows: false
 			},
 			768: {
-				perPage: 4,
+				perPage: 3,
 				perMove: 2,
 				height: 'auto',
 				arrows: false
@@ -66,9 +66,9 @@ const Home = () => {
 	};
 
 	return (
-		<section className='products' id='product'>
-			<h2>Our Awesome Home</h2>
-			<p className='short-info'>Home are good for our customers</p>
+		<section  id='product'>
+			<h2>Our Awesome Products</h2>
+			<p className='short-info'>Our watches are of good quality for our customers</p>
 			<div className='products-container'>
 				<div className='wrapper'>
 					<Splide
@@ -148,12 +148,13 @@ const Home = () => {
 					</Splide>
 				</div>
 			</div>
-			<Cart />
 			<ToastContainer />
-			<h2>Why Choose Us</h2>
-			<p className='short-info'>Our products are the best</p>
-			<ChooseUs />
-			<h2>Compare Similar Home</h2>
+			<div className='chooseUs'>
+				<h2>Why Choose Us</h2>
+				<p className='short-info'>Our products are the best</p>
+				<ChooseUs />
+			</div>
+			<h2>Compare Similar Watches</h2>
 			<p className='short-info'>
 				Compare our products with other products
 			</p>

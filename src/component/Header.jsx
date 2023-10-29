@@ -1,64 +1,62 @@
-import React, { useState, useEffect } from 'react';
 import 'animate.css';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 import CollectionNav from '../component/collectionNav';
+import FirstHeader from '../component/firstHeader';
 import MaterialNav from '../component/material';
 import Styles from '../component/styles';
-import FirstHeader from '../component/firstHeader';
 import { useGlobalContext } from '../context';
 import '../style/Header.css';
-import {Link} from 'react-router-dom'
+import Account from './account';
+import Cart from './cart';
+import Search from './search';
+import WishList from './wishList';
 
 function Header() {
-	// Add sticky to .secondHeader on window scroll with animation
-	const [sticky, setSticky] = useState(false);
 	const { cartCount, wishListCount } = useGlobalContext();
+
+	const [sticky, setSticky] = useState(false);
+	const [openAccMenu, setOpenAccMenu] = useState(false);
+	const [openNav, setOpenNav] = useState(false);
+	const [openCart, setOpenCart] = useState(false);
+	const [openSearch, setOpenSearch] = useState(false);
+	const [openWishList, setOpenWishList] = useState(false);
+
 	useEffect(() => {
-		window.addEventListener('scroll', () => {
+		const handleScroll = () => {
 			if (window.scrollY > 50) {
 				setSticky(true);
 			} else {
 				setSticky(false);
 			}
-		});
+		};
+
+		window.addEventListener('scroll', handleScroll);
 
 		return () => {
-			window.removeEventListener('scroll', () => {
-				if (window.scrollY > 0) {
-					setSticky(true);
-				} else {
-					setSticky(false);
-				}
-			});
+			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
 
 	const openNavMenu = () => {
-		const navMenu = document.querySelector('.nav-container');
-		navMenu.classList.add('openMenu');
-	};
-	const closeNavMenu = () => {
-		const navMenu = document.querySelector('.nav-container');
-		navMenu.classList.remove('openMenu');
+		setOpenNav(!openNav);
+		console.log('Clicked');
 	};
 
 	const openCartMenu = () => {
-		const cartContainer = document.querySelector('.cart-container');
-		cartContainer.classList.add('cartOpen');
+		setOpenCart(!openCart);
 	};
 
 	const openSearchMenu = () => {
-		const searchContainer = document.querySelector('.search-container');
-		searchContainer.classList.add('searchOpen');
+		setOpenSearch(!openSearch);
 	};
 
 	const openAccountMenu = () => {
-		const accountMenu = document.querySelector('.user-account');
-		accountMenu.classList.add('open');
+		setOpenAccMenu(!openAccMenu);
 	};
-	const openWishList = () => {
-		const wishList = document.querySelector('.wishList-container');
-		wishList.classList.add('wishOpen');
+	const openWishListMenu = () => {
+		setOpenWishList(!openWishList);
 	};
 	return (
 		<header id='header' className='header'>
@@ -74,20 +72,18 @@ function Header() {
 					</button>
 				</div>
 				<div className='logo'>
-					<Link
-						to='/'
-					>
+					<Link to='/'>
 						<img src={Logo} alt='Klassic watches' />
 						Klassic
 					</Link>
 				</div>
-				<div className='nav-container'>
+				<div className={`nav-container ${openNav ? 'open' : ''}`}>
 					<nav>
 						<div className='closeNav'>
 							<button
 								type='button'
 								className='navBtn closeNav'
-								onClick={closeNavMenu}
+								onClick={openNavMenu}
 								aria-label='Close nav menu'>
 								<i className='fa fa-close'></i>
 							</button>
@@ -145,16 +141,21 @@ function Header() {
 							aria-label='Open search menu'>
 							<i className='fas fa-search'></i>
 						</button>
+						<Search
+							openSearchMenu={openSearchMenu}
+							openSearch={openSearch}
+						/>
 					</div>
 					<div className='cart'>
 						<button
 							className='btn'
 							onClick={openCartMenu}
-							title='Cart Shop'
+							title='Cart Menu'
 							aria-label='Open cart menu'>
 							<i className='fas fa-shopping-cart'></i>
 						</button>
 						<span className='notification'>{cartCount}</span>
+						<Cart openCartMenu={openCartMenu} openCart={openCart} />
 					</div>
 					<div className='user'>
 						<button
@@ -163,15 +164,23 @@ function Header() {
 							aria-label='Open account menu'>
 							<i className='fas fa-user' title='User Account'></i>
 						</button>
+						<Account
+							openAccMenu={openAccMenu}
+							openAccountMenu={openAccountMenu}
+						/>
 					</div>
 					<div className='wishList'>
 						<button
 							className='btn'
-							onClick={openWishList}
+							onClick={openWishListMenu}
 							aria-label='Open wishlist menu'>
 							<i className='fas fa-heart' title='Wish List'></i>
 						</button>
 						<span className='notification'>{wishListCount}</span>
+						<WishList
+							openWishListMenu={openWishListMenu}
+							openWishList={openWishList}
+						/>
 					</div>
 				</div>
 			</div>

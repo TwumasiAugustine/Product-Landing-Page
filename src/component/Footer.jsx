@@ -1,5 +1,6 @@
 import React from 'react'
 import '../style/Footer.css'
+import { Link } from 'react-router-dom';
 function Footer() {
 
     const date = new Date()
@@ -112,19 +113,19 @@ function Footer() {
                 <div className='nav-link'>
                     <ul>
                         <li>
-                            <a href='#'>Shop</a>
+                            <Link to='/page/shop'>Shop</Link>
                         </li>
                         <li>
-                            <a href='#'>Collections</a>
+                            <Link to='/page/collection'>Collections</Link>
                         </li>
                         <li>
-                            <a href='#'>Service</a>
+                            <Link to='/page/services'>Service</Link>
                         </li>
                         <li>
-                            <a href='#'>About</a>
+                            <Link to='/page/about#about'>About</Link>
                         </li>
                         <li>
-                            <a href='#'>Contact</a>
+                            <Link to='/page/contact'>Contact</Link>
                         </li>
                     </ul>
                 </div>

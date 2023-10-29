@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import '../style/product.css'
 const ChooseUs = () => {
     const bannerRef = useRef(null);
     const [showCard, setShowCard] = useState(false);

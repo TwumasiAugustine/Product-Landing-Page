@@ -1,25 +1,20 @@
+/* eslint-disable react/prop-types */
 
 import React from 'react'
 import { useGlobalContext } from '../context'
 import '../style/wishList.css'
-const WishList = () => {
+const WishList = ({openWishList, openWishListMenu}) => {
 	const { addToCart, wishList, removeFromWishList } = useGlobalContext();
 
-	const closeWishlist = () => {
-		const wishListContainer = document.querySelector('.wishList-container');
-		wishListContainer.classList.remove('wishOpen');
-	}
-
-
 	return (
-		<div className='wishList-container'>
-			<div className='transparentSide'></div>
+		<div className={`wishList-container ${openWishList ? 'open' : ''}`}>
+			<div className='transparentSide' onClick={openWishListMenu}></div>
 			<div className='wishMenuSide'>
 				<div className='wishMenu'>
 					<h3>WishList</h3>
 					<button
 						className='close'
-						onClick={closeWishlist}
+						onClick={openWishListMenu}
 						aria-label='Close menu'>
 						<i className='fa fa-close'></i>
 					</button>

@@ -1,262 +1,273 @@
+.testimonial {
+	text-align: center;
+	padding: 40px 0;
+	background: var(--primary-color);
+}
+
+.testimonial h2 {
+	font-size: 32px;
+}
+
 .testimonial .short-info {
-    text-align: center;
-    padding: 1rem;
-    font-weight: 500;
+	font-size: 18px;
+	color: #333;
+	padding-bottom: 20px;
 }
 
-.testimonial .testimonial-container {
-    margin: auto;
-    height: auto;
-    overflow: hidden;
-    align-items: center;
-    z-index: 2;
+.testimonial .splide__track {
+	display: flex;
+	justify-content: center;
 }
 
-
-
-.testimonial .testimonial-container .testimonials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: calc(300px * 3);
-    animation: testScroll 10s linear infinite;
+.testimonial .splide__list {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
 }
 
-.testimonial .testimonial-container .testimonial-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    margin: 50px 0;
-    color: var(--primary-color);
-    background-color: #949494fa;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    width: 300px;
-    height: fit-content;
-    position: relative;
+.testimonial-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	background: var(--primary-color);
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	margin: 0 20px;
+	width:250px;
 }
 
-.testimonial .testimonial-container .testimonial-card .testimonial-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    width: 100%;
-    height: fit-content;
+.testimonial-img img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-bottom: 10px;
 }
 
-.testimonial .testimonial-container .testimonial-card .testimonial-img {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
+.testimonial-info {
+	flex: 1;
 }
 
-.testimonial .testimonial-container .testimonial-card .testimonial-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.testimonial-text {
+	font-size: 16px;
+	color: #555;
+	margin-bottom: 10px;
 }
 
-.testimonial .testimonial-container .testimonial-card .testimonial-info h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: capitalize;
+.testimonial-user-name {
+	font-size: 20px;
+	margin: 0;
 }
 
-.testimonial .testimonial-container .testimonial-card .testimonial-info p {
-    font-size: 0.97rem;
-    font-weight: 500;
-    line-height: 1.1;
-    padding: 2rem 0;
-    text-align: center;
-    color: var(--primary-color);
+.testimonial-user small {
+	color: #777;
 }
 
+/* Subscribe Section */
 .subscribe {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+	text-align: center;
+	background: var(--primary-color);
+	padding: 40px 0;
 }
 
-.subscribe #form {
-    width: 100%;
-    max-width: 700px;
-    padding: 1rem;
-    background-color: var(--primary-color);
-    position: relative;
+.subscribe form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
 }
 
-.subscribe #form input {
-    padding: 1rem;
-    background-color: transparent;
-    font-size: 1rem;
-    font-weight: 500;
-    border: 1px solid var(--third-color);
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    width: 100%;
+.subscribe form input {
+	width: 100%;
+	max-width: 500px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 2rem;
+	background: #f7f7f7;
+	outline: none;
 }
 
-.subscribe #form input:focus {
-    outline: none;
+.subscribe form input:focus{
+	border: 1px solid var(--third-color);
+}
+#subscribeBtn {
+	width: 120px;
+	padding: 20px;
+	border: 1px solid;
+	border-radius: 5px;
+	background-color: var(--third-color);
+	color: #fff;
+	font-size: 18px;
+	margin-left: 10px;
+	cursor: pointer;
+	transition: all .3s;
 }
 
-.subscribe #form input::placeholder {
-    color: #ccc;
-    font-size: 0.86rem;
+#subscribeBtn:hover {
+	background-color: var(--primary-color);
+	color: var(--third-color);
+	border: 1px solid var(--third-color);
 }
 
-.subscribe #form button {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: fit-content;
-    padding: 1rem;
-    background-color: var(--third-color);
-    color: var(--primary-color);
-    font-size: 1rem;
-    font-weight: 500;
-    border: 1px solid var(--third-color);
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+
+.downloadApp {
+	text-align: center;
+	padding: 40px 0;
+	background: var(--primary-color);
 }
 
-.subscribe #form button:hover {
-    background-color: #a3500ce5;
-    ;
+.downloadApp h2 {
+	font-size: 32px;
 }
 
-.subscribe #form button i {
-    margin-left: 0.5rem;
+.downloadApp .short-info {
+	font-size: 18px;
+	color: #333;
+	margin-bottom: 40px;
 }
 
 .downloadApp-container {
-    padding: 1rem;
-    background-color: var(--primary-color);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.downloadApp a {
-    display: inline-block;
-    padding: 1rem;
-    background-color: var(--third-color);
-    color: var(--primary-color);
-    font-size: 1rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    border: 1px solid var(--third-color);
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    margin: 1rem 0.5rem;
-    cursor: pointer;
+.downloadApp-container a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	color: var(--third-color);
+	font-size: 18px;
+	margin: 0 20px;
 }
 
-.downloadApp a i {
-    margin-right: 0.5rem;
-    font-size: 1.3rem;
+.downloadApp-container i {
+	font-size: 40px;
+	margin-bottom: 10px;
 }
 
-.downloadApp a:hover {
-    background-color: var(--primary-color);
-    color: var(--third-color);
-    border: 1px solid var(--third-color);
-}
-
+/* Media query for smartphones */
 @media screen and (max-width: 767px) {
-    .testimonial .testimonial-container {
-        display: flex;
-        margin: 20px auto;
-        height: auto;
-        overflow: hidden;
-        align-items: center;
-    }
+	.testimonial h2 {
+		font-size: 24px;
+	}
 
-    .testimonial .testimonial-container::before {
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        content: "";
-        width: 24%;
-        height: 120px;
-    }
+	.testimonial .short-info {
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
 
-    .testimonial .testimonial-container::after {
-        position: absolute;
-        left: 0;
-        content: "";
-        width: 24%;
-        height: 120px;
-    }
+	.testimonial-card {
+		width: 200px;
+		margin: 0 10px;
+	}
 
+	.testimonial-img img {
+		width: 60px;
+		height: 60px;
+	}
 
-    .testimonial .testimonial-container .testimonials .testimonial-card {
-        padding: 0.5rem;
-        margin: 10px 0;
-        width: 250px;
-        height: fit-content;
-    }
+	.testimonial-text {
+		font-size: 14px;
+	}
 
-    .testimonial .testimonial-container .testimonials .testimonial-card .testimonial-info {
-        padding: 0.5rem;
-        gap: 0.3rem;
-    }
+	.testimonial-user-name {
+		font-size: 18px;
+	}
 
-    .testimonial .testimonial-container .testimonial-card .testimonial-img {
-        top: -13px;
-        width: 40px;
-        height: 40px;
-    }
+	.subscribe {
+		margin: 20px 0;
+	}
 
-    .testimonial .testimonial-container .testimonial-card .testimonial-info p {
-        font-size: 0.74rem;
-        text-align: center;
-    }
+	#subEmail {
+		font-size: 14px;
+	}
 
-    .testimonial .testimonial-container .testimonial-card .testimonial-info h3 {
-        font-size: 0.89rem;
-    }
+	#subscribeBtn {
+		font-size: 16px;
+	}
 
-    .subscribe #form {
-        width: 100%;
-        margin: 0;
-    }
+	.downloadApp h2 {
+		font-size: 24px;
+	}
 
-    .subscribe #form input {
-        padding: 0.8rem;
-        width: 100%;
-    }
+	.downloadApp .short-info {
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
 
-    .subscribe #form button {
-        padding: 0.8rem;
-        font-size: 0.95rem;
-    }
+	.downloadApp-container a {
+		font-size: 16px;
+	}
 
-    .downloadApp a {
-        padding: 0.6rem;
-        margin: 0 1rem;
-        font-size: 0.89rem;
-    }
-
-    .downloadApp a i {
-        font-size: 0.85rem;
-    }
+	.downloadApp-container i {
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
 }
 
-/* Tablet Screen */
+/* Media query for tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .testimonial h2 {
+        font-size: 28px;
+    }
 
+    .testimonial .short-info {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    .testimonial-img img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+
+    .testimonial-user-name {
+        font-size: 18px;
+    }
+
+    .subscribe {
+        margin: 20px 0;
+    }
+
+    #subEmail {
+        font-size: 14px;
+    }
+
+    #subscribeBtn {
+        font-size: 16px;
+    }
+
+    .downloadApp h2 {
+        font-size: 24px;
+    }
+
+    .downloadApp .short-info {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .downloadApp-container a {
+        font-size: 16px;
+    }
+
+    .downloadApp-container i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+}

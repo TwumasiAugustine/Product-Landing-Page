@@ -1,6 +1,6 @@
 .contact {
-    background: #e0e0e0;
-    padding-bottom: 2rem;
+    padding: 20px 0;
+	background: var(--primary-color);
 }
 
 .contact .contact-container {

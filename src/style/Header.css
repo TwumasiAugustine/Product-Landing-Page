@@ -106,6 +106,7 @@
     background: var(--primary-color);
     padding: 0 3rem;
     width: 100%;
+    z-index: 999;
     transition: all 0.3s ease-in;
     box-shadow: 0 2px 13px rgba(0, 0, 0, 0.2)
 }
@@ -296,6 +297,11 @@
     z-index: 99;
 }
 
+.open {
+	transform: translateX(0%);
+}
+
+
 /* Mobile Phone Screen */
 @media screen and (max-width: 767px) {
     body {
@@ -358,6 +364,10 @@
         margin-right: 0;
     }
 
+        #header .secondHeader .nav-container {
+
+            z-index: 999;
+        }
     #header .secondHeader .nav-container nav {
         display: flex;
         flex-direction: column;

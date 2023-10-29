@@ -6,10 +6,6 @@ import Products from '../../page/Home';
 import Testimonial from './testimonial';
 import FrequentAskQuestion from './faq';
 import Contact from './contact';
-import Account from './account';
-import Search from './search';
-import WishList from './wishList';
-
 
 
 function HomeContent() {
@@ -20,9 +16,6 @@ function HomeContent() {
 			<FeaturedProd />
 			<Products />			
 			<Testimonial />
-			<Account />
-			<Search />
-			<WishList/>
 			<FrequentAskQuestion />
 			<Contact />
 		</main>
