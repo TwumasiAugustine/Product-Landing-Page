@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
-import { useGlobalContext } from '../context'
+import React from 'react';
+import { useGlobalContext } from '../context';
+import CheckOut from '../component/checkout';
 
-const Cart = ({openCart, openCartMenu}) => {
-    const { removeCart, cart, handleQuantityChange, total, subTotal, tax } = useGlobalContext();
+const Cart = ({ openCart, openCartMenu }) => {
+	const { removeCart, cart, handleQuantityChange } =
+		useGlobalContext();
 
-    return (
+	return (
 		<div className={`cart-container ${openCart ? 'open' : ''}`}>
 			<div className='transparentSide' onClick={openCartMenu}></div>
 			<div className='cartMenuSide'>
@@ -18,88 +20,69 @@ const Cart = ({openCart, openCartMenu}) => {
 						<i className='fa fa-close'></i>
 					</button>
 				</div>
-				<div className='carts' key={cart}>
-					{cart.length === 0 ? (
-						<p className='cartEmpty'>
-							Cart is empty{' '}
-							<i className='fa fa-shopping-cart'></i>
-						</p>
-					) : (
-						cart.map((item) => (
-							<div className={`product-card`} key={item.id}>
-								<div className='img-container'>
-									<img
-										src={`./images/${item.image}`}
-										alt='watch'
-										loading='lazy'
-									/>
-								</div>
-								<div className='product-info'>
-									<p className='product-name'>
-										{item.productName}
-									</p>
-									<p className='brand'>{item.brand}</p>
-									<span className='price'>
-										${' '}
-										{(item.price * item.quantity).toFixed(
-											2
-										)}
-									</span>
-									<div className='priQty'>
-										<label htmlFor='quantity'>
-											Qty
-											<input
-												type='number'
-												value={item.quantity}
-												name='quantity'
-												id='qty'
-												onChange={(e) =>
-													handleQuantityChange(
-														e,
-														item
-													)
+				<div className='cartList'>
+					<div className='carts' key={cart}>
+						{cart.length === 0 ? (
+							<p className='cartEmpty'>
+								Cart is empty{' '}
+								<i className='fa fa-shopping-cart'></i>
+							</p>
+						) : (
+							cart.map((item) => (
+								<div className={`product-card`} key={item.id}>
+									<div className='img-container'>
+										<img
+											src={`./images/${item.image}`}
+											alt='watch'
+											loading='lazy'
+										/>
+									</div>
+									<div className='product-info'>
+										<p className='product-name'>
+											{item.productName}
+										</p>
+										<p className='brand'>{item.brand}</p>
+										<span className='price'>
+											${' '}
+											{(
+												item.price * item.quantity
+											).toFixed(2)}
+										</span>
+										<div className='priQty'>
+											<label htmlFor='quantity'>
+												Qty
+												<input
+													type='number'
+													value={item.quantity}
+													name='quantity'
+													id='qty'
+													onChange={(e) =>
+														handleQuantityChange(
+															e,
+															item
+														)
+													}
+													min={1}
+												/>
+											</label>
+											<button
+												onClick={() =>
+													removeCart(item.id)
 												}
-												min={1}
-											/>
-										</label>
-										<button
-											onClick={() => removeCart(item.id)}
-											aria-label='Remove from cart'>
-											Remove
-										</button>
+												aria-label='Remove from cart'>
+												Remove
+											</button>
+										</div>
 									</div>
 								</div>
-							</div>
-						))
-					)}
-				</div>
-				<div className='total-container'>
-					<div className='cart-total'>
-						<div className='subtotal'>
-							<span>Subtotal</span>
-							<span>$ {subTotal.toFixed(2)}</span>
-						</div>
-						<div className='tax'>
-							<span>Tax (15%):</span>
-							<span>$ {tax.toFixed(2)}</span>
-						</div>
-						<div className='total'>
-							<span>Total:</span>
-							<span>$ {total.toFixed(2)}</span>
-						</div>
-						<div className='btn-container'>
-							<button
-								className='checkout-btn'
-								id='checkout'
-								aria-label='Checkout'>
-								Checkout
-							</button>
-						</div>
+							))
+						)}
 					</div>
+					<CheckOut/>
 				</div>
 			</div>
 		</div>
 	);
-}
+};
 
-export default Cart
+export default Cart;

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
 const createAcc = () => {
-    const [passwordError, setPasswordError] = useState('')
+	const [passwordError, setPasswordError] = useState('')
+	const [showPassword, setShowPassword] = useState(false);
     const [formData, setFormData] = useState({
         username: '',
         email: '',
@@ -25,33 +26,19 @@ const createAcc = () => {
 	const validateAndSubmit = async (e) => {
 		e.preventDefault()
 		if (!isPasswordValid(formData.password)) {
-			setPasswordError("Please enter a valid Password")
+			setPasswordError("Password should contain at least one uppercase, lowercase, digit, symbol and must be at least 8 characters")
 		} else if (formData.password !== formData.confirmPassword) {
 			setPasswordError("Passwords do not match")
 		} else {
-			
 			alert("Account Created Successfully");
 			console.log(formData);
 			window.location.reload();
 		}
 		
 	};
-	
-    
-	
-	const showPassword = () => {
-		const passwordInput = document.querySelector('#password');
-		const togglePassword = document.querySelector('.fa');
-
-		if (passwordInput.type === 'password') {
-			passwordInput.type = 'text';
-			togglePassword.classList.remove('fa-eye');
-			togglePassword.classList.add('fa-eye-slash');
-		} else {
-			passwordInput.type = 'password';
-			togglePassword.classList.remove('fa-eye-slash');
-			togglePassword.classList.add('fa-eye');
-		}
+		
+	const togglePassword = () => {
+		setShowPassword(!showPassword)
 	}
 	return (
 		<div className='acc-container'>
@@ -90,7 +77,7 @@ const createAcc = () => {
 					<div className='form-control'>
 						<label htmlFor='password'>Password: </label>
 						<input
-							type='password'
+							type={showPassword ? 'text' : 'password'}
 							name='password'
 							id='password'
 							required
@@ -98,7 +85,7 @@ const createAcc = () => {
 							placeholder='Enter Password'
 							value={formData.password}
 						/>
-						<i className='fa fa-eye' onClick={showPassword}></i>
+						<i className={showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'} onClick={togglePassword}></i>
 						<small className='error'>{passwordError}</small>
 					</div>
 					<div className='form-control'>

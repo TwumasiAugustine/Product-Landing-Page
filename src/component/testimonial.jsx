@@ -15,12 +15,12 @@ function Testimonial() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		emailValue
 	};
 
 	const options = {
 		type: 'loop',
 		gap: '1rem',
-		drag: 'free',
 		autoplay: true,
 		pauseOnHover: true,
 		resetProgress: false,
@@ -32,13 +32,13 @@ function Testimonial() {
 		height: 'auto',
 		breakpoints: {
 			640: {
-				perPage: 3,
+				perPage: 2,
 				perMove: 1,
 				height: 'auto',
 				arrows: false
 			},
 			768: {
-				perPage: 3,
+				perPage: 2,
 				perMove: 1,
 				height: 'auto',
 				arrows: false
@@ -53,44 +53,88 @@ function Testimonial() {
 
 
 	return (
-		<div>
-			<section className='testimonial' ref={testimonialRef}>
+		<section>
+			<div className='testimonial' ref={testimonialRef}>
 				<h2>What Our Customers Say</h2>
 				<p className='short-info'>
 					Our customers are happy with our products
 				</p>
-				<Splide options={options}>
-					<SplideTrack>
-						{data.map((item) => (
-							<SplideSlide key={item.id}>
-								<div className='testimonial-card'>
-									<div className='testimonial-img'>
-										<img
-											src={item.image}
-											alt={item.name}
-											loading='lazy'
-										/>
-									</div>
-									<div className='testimonial-info'>
-										<p className='testimonial-text'>
-											{item.text}
-										</p>
-										<div className='testimonial-user'>
-											<h3 className='testimonial-user-name'>
-												{item.name}
-											</h3>
+				<div className='wrapper'>
+					{/* <Splide
+						options={options}
+						aria-labelledby='testimonials'
+						hasTrack={false}
+					>
+						<SplideTrack>
+							{data.map((item) => {
+								const { id, image, name, text, work } = item
+								return (
+									<SplideSlide key={id}>
+										<div className='testimonial-card'>
+											<div className='testimonial-img'>
+												<img
+													src={image}
+													alt={name}
+													loading='lazy'
+												/>
+											</div>
+											<div className='testimonial-info'>
+												<p className='testimonial-text'>
+													{text}
+												</p>
+												<div className='testimonial-user'>
+													<h3 className='testimonial-user-name'>
+														{name}
+													</h3>
+												</div>
+												<small>
+													{work}
+												</small>
+											</div>
 										</div>
-										<small>{item.work}</small>
-									</div>
-								</div>
-							</SplideSlide>
-						))}
-					</SplideTrack>
-				</Splide>
-			</section>
+									</SplideSlide>
+								);
+							})}
+						</SplideTrack>
+					</Splide> */}
+					<Splide
+						options={options}
+					>
+						<SplideTrack>
+							{data.map((testimonial) => {
+								const { id, image, name, text, work } = testimonial;
+								return (
+									<SplideSlide key={id}>
+										<div className='testimonial-card'>
+											<div className='testimonial-img'>
+												<img
+													src={image}
+													alt={name}
+													loading='lazy'
+												/>
+											</div>
+											<div className='testimonial-info'>
+												<p className='testimonial-text'>
+													{text}
+												</p>
+												<div className='testimonial-user'>
+													<h3 className='testimonial-user-name'>
+														{name}
+													</h3>
+												</div>
+												<small>{work}</small>
+											</div>
+										</div>
+									</SplideSlide>
+								);
+							})}
+						</SplideTrack>
+					</Splide>
+				</div>
+			</div>
 			<div className='subscribe'>
-			<h2>Subscribe to Get Updates</h2>
-			<p className='short-info'>Subscribe to get updates from us</p>
+				<h2>Subscribe to Get Updates</h2>
+				<p className='short-info'>Subscribe to get updates from us</p>
 				<form action='#' id='form' onSubmit={handleSubmit}>
 					<input
 						type='email'
@@ -123,7 +167,7 @@ function Testimonial() {
 					</a>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import '../src/style/About.css'
+import '../style/About.css'
 import { Link } from 'react-router-dom';
 
 const About = () => {

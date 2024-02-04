@@ -25,7 +25,6 @@ const SearchList = ({openSearch, openSearchMenu}) => {
 			id,
 			image,
 			brand,
-			category,
 			productName: name,
 			price
 		} = product;
@@ -37,14 +36,12 @@ const SearchList = ({openSearch, openSearchMenu}) => {
 						<img
 							src={`./images/${image}`}
 							alt={name}
-							loading='lazy'
+						loading='lazy'
 						/>
 					</div>
 					<div className='card-content'>
-						<h3>Product: {name}</h3>
 						<p>Brand: {brand}</p>
 						<p>Price: $ {price}</p>
-						<p>Category: {category}</p>
 						<button
 							type='button'
 							id='addToCart'

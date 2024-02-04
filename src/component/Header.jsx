@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 import CollectionNav from '../component/collectionNav';
 import FirstHeader from '../component/firstHeader';
+import SecondHeader from '../component/secondHeader'
 import MaterialNav from '../component/material';
 import Styles from '../component/styles';
 import { useGlobalContext } from '../context';
@@ -41,7 +42,7 @@ function Header() {
 
 	const openNavMenu = () => {
 		setOpenNav(!openNav);
-		console.log('Clicked');
+
 	};
 
 	const openCartMenu = () => {
@@ -61,7 +62,8 @@ function Header() {
 	return (
 		<header id='header' className='header'>
 			<FirstHeader />
-			<div className={sticky ? 'secondHeader sticky' : 'secondHeader'}>
+			<SecondHeader />
+			<div className={sticky ? 'mainHeader sticky' : 'mainHeader'}>
 				<div className='mobileMenu'>
 					<button
 						type='button'

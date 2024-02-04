@@ -1,15 +1,14 @@
-import React from 'react';
-import Table from '../src/component/table';
-import ChooseUs from '../src/component/chooseUs';
 import 'animate.css';
-import '../src/style/product.css';
+import React from 'react';
+import ChooseUs from '../component/chooseUs';
+import Table from '../component/table';
+import '../style/product.css';
 
-import { useGlobalContext } from '../src/context';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { useGlobalContext } from '../context';
 
 const Home = () => {
-
 	const {
 		productsData,
 		addToCart,
@@ -66,9 +65,11 @@ const Home = () => {
 	};
 
 	return (
-		<section  id='product'>
+		<section id='product'>
 			<h2>Our Awesome Products</h2>
-			<p className='short-info'>Our watches are of good quality for our customers</p>
+			<p className='short-info'>
+				Our watches are of good quality for our customers
+			</p>
 			<div className='products-container'>
 				<div className='wrapper'>
 					<Splide

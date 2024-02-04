@@ -1,11 +1,11 @@
 import React from 'react';
-import HeroSection from './heroSection';
+import Products from '../page/Home';
+import Contact from './info';
 import CustomerService from './customerService';
-import FeaturedProd from './featuredProd';
-import Products from '../../page/Home';
-import Testimonial from './testimonial';
 import FrequentAskQuestion from './faq';
-import Contact from './contact';
+import FeaturedProd from './featuredProd';
+import HeroSection from './heroSection';
+import Testimonial from './testimonial';
 
 
 function HomeContent() {

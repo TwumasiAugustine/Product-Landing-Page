@@ -31,9 +31,7 @@ const WishList = ({openWishList, openWishListMenu}) => {
 								image,
 								productName: name,
 								price,
-								discount,
-								category,
-								brand
+								discount
 							} = product;
 							return (
 								<div className='favorite-card' key={id}>
@@ -46,8 +44,6 @@ const WishList = ({openWishList, openWishListMenu}) => {
 									</div>
 									<div className='product-info'>
 										<p className='product-name'>{name}</p>
-										<p className='category'>{category}</p>
-										<p className='brand'>{brand}</p>
 										<div className='cost-container'>
 											<span className='price'>
 												$ {price}
@@ -58,14 +54,16 @@ const WishList = ({openWishList, openWishListMenu}) => {
 										</div>
 										<div className='btn-container'>
 											<button
+												title='Add To Cart'
 												className='btn'
 												onClick={() =>
 													addToCart(product)
 												}
 												aria-label='Add to cart'>
-												Add To Cart
+												Cart
 											</button>
 											<button
+												title='Remove From WishList'
 												onClick={() =>
 													removeFromWishList(
 														product.id

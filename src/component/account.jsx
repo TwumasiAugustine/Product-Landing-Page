@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const account = ({openAccMenu, openAccountMenu}) => {
+const Account = ({openAccMenu, openAccountMenu}) => {
 	const [formData, setFormData] = useState({ email: '', password: '' });
+	const [showPassword, setShowPassword] = useState(false)
+
 	const handleChange = (event) => {
 		const { name, value } = event.target;
 		setFormData((prevFormData) => {
@@ -20,18 +23,7 @@ const account = ({openAccMenu, openAccountMenu}) => {
 	}
 
 	function togglePassWordVisibility() {
-		const passwordInput = document.querySelector('#password');
-		const togglePassword = document.querySelector('.fas');
-
-		if (passwordInput.type === 'password') {
-			passwordInput.type = 'text';
-			togglePassword.classList.remove('fa-eye');
-			togglePassword.classList.add('fa-eye-slash');
-		} else {
-			passwordInput.type = 'password';
-			togglePassword.classList.remove('fa-eye-slash');
-			togglePassword.classList.add('fa-eye');
-		}
+		setShowPassword(!showPassword)
 	}
 
 	
@@ -66,7 +58,7 @@ const account = ({openAccMenu, openAccountMenu}) => {
 						<div className='form-control'>
 							<label htmlFor='password'>Password</label>
 							<input
-								type='password'
+								type={showPassword ? 'text' : 'password'}
 								id='password'
 								placeholder='Enter password'
 								onChange={handleChange}
@@ -76,11 +68,13 @@ const account = ({openAccMenu, openAccountMenu}) => {
 								value={formData.password}
 							/>
 							<i
-								className='fas fa-eye'
-								onClick={togglePassWordVisibility}></i>
+								className={showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'}
+								onClick={togglePassWordVisibility}>
+							</i>
 						</div>
 						<div className='form-control'>
 							<button
+								className='btn'
 								type='submit'
 								aria-label='Submit'
 								tabIndex={0}>
@@ -90,7 +84,7 @@ const account = ({openAccMenu, openAccountMenu}) => {
 					</form>
 					<div className='acc-info'>
 						<p>
-							Don't have an account? <Link to='/page/createAcc'>Sign up</Link>
+							Don't have an account? <Link to='/page/createAcc' onClick={openAccountMenu}>Sign up</Link>
 						</p>
 						<p>
 							Forgot password? <a href='#'>Reset</a>
@@ -102,4 +96,4 @@ const account = ({openAccMenu, openAccountMenu}) => {
 	);
 }
 
-export default account;
+export default Account;
