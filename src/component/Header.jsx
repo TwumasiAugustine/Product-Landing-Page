@@ -42,7 +42,7 @@ function Header() {
 
 	const openNavMenu = () => {
 		setOpenNav(!openNav);
-
+        console.log('clicked')
 	};
 
 	const openCartMenu = () => {
@@ -79,13 +79,12 @@ function Header() {
 						Klassic
 					</Link>
 				</div>
-				<div className={`nav-container ${openNav ? 'open' : ''}`}>
+				<div className={`nav-container`}>
 					<nav>
 						<div className='closeNav'>
 							<button
 								type='button'
 								className='navBtn closeNav'
-								onClick={openNavMenu}
 								aria-label='Close nav menu'>
 								<i className='fa fa-close'></i>
 							</button>

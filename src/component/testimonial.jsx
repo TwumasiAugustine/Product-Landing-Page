@@ -3,7 +3,7 @@ import 'animate.css';
 import data from '../data/testimonial.json';
 import '../style/testimonial.css'; 
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import '@splidejs/react-splide/css';
 
 function Testimonial() {
 	const [emailValue, setEmailValue] = useState('');
@@ -15,18 +15,20 @@ function Testimonial() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		emailValue
+		
+		if (!emailValue) return;
+		
 	};
 
 	const options = {
 		type: 'loop',
 		gap: '1rem',
 		autoplay: true,
-		pauseOnHover: true,
-		resetProgress: false,
 		perPage: 1,
 		perMove: 1,
 		arrows: true,
+		drag: 'free',
+		focus: 'center',
 		pagination: false,
 		lazyLoad: 'nearby',
 		height: 'auto',
@@ -34,23 +36,19 @@ function Testimonial() {
 			640: {
 				perPage: 2,
 				perMove: 1,
-				height: 'auto',
 				arrows: false
 			},
 			768: {
 				perPage: 2,
 				perMove: 1,
-				height: 'auto',
 				arrows: false
 			},
 			1024: {
 				perPage: 3,
-				perMove: 1,
-				height: 'auto'
+				perMove: 1
 			}
 		}
 	};
-
 
 	return (
 		<section>
@@ -98,6 +96,7 @@ function Testimonial() {
 						</SplideTrack>
 					</Splide> */}
 					<Splide
+						aria-labelledby='testimonials'
 						options={options}
 					>
 						<SplideTrack>
