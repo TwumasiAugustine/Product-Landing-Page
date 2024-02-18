@@ -1,4 +1,3 @@
-
 #featuredProduct {
 	text-align: center;
 	padding: 40px 0;
@@ -12,15 +11,16 @@ h2 {
 
 .short-info {
 	font-size: 16px;
-	color: #333;
+	color: var(--paragraph-color);
 	margin-bottom: 20px;
 }
 
-#featuredProduct .container{
-    display: flex;
-    justify-content: space-evenly;
+#featuredProduct .container {
+	display: flex;
+	justify-content: space-evenly;
 	align-items: center;
 }
+
 .featured-product {
 	display: flex;
 	justify-content: space-evenly;
@@ -38,18 +38,20 @@ h2 {
 .text-con {
 	display: flex;
 	align-items: center;
-    justify-content: center;
+	justify-content: center;
 	margin-bottom: 20px;
 }
-.left-text .text-con .inner-icon i{
-    font-size: 24px;
-    margin-left: 20px;
-    color: var(--third-color)
+
+.left-text .text-con .inner-icon i {
+	font-size: 24px;
+	margin-left: 20px;
+	color: var(--background-color)
 }
+
 .right-text .text-con .inner-icon i {
-    font-size: 24px;
-    margin-right: 20px;
-    color: var(--third-color)
+	font-size: 24px;
+	margin-right: 20px;
+	color: var(--background-color)
 }
 
 .inner-text {
@@ -67,51 +69,53 @@ h4 {
 	margin-left: 10px;
 }
 
-.center-img{
-    padding: 20px;
+.center-img {
+	padding: 20px;
 }
+
 .center-img img {
 	object-fit: contain;
-    max-width: 100%;
-    height: 300px;
+	max-width: 100%;
+	height: 300px;
 }
 
 
 .deal-Of-The-Week {
 	text-align: center;
 	margin: 40px 0;
-	/* background: var(--primary-color) */
 }
 
 .deal-Of-The-Week .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 }
 
 .item-box {
-    display: flex;
-    gap: 10px;
-    width: 100%;
+	display: flex;
+	gap: 10px;
+	width: 100%;
 	max-width: 800px;
-	border: 1px solid #ccc;
+	border: 1px solid var(--border-color);
 	padding: 20px;
-    margin: 20px;
+	margin: 20px;
 	border-radius: 5px;
 	background: var(--primary-color);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.img-container {
-    width: 45%;
+	box-shadow: 0 2px 4px var(--border-color);
 }
 
-.item-info{
-    width: 55%;
+.img-container {
+	width: 45%;
 }
+
+.item-info {
+	width: 55%;
+}
+
 .img-container img {
-    object-fit: contain;
-    height: auto;
+	object-fit: contain;
+	height: auto;
 	max-width: 100%;
 	height: 300px;
 	border-radius: 5px;
@@ -133,7 +137,7 @@ h4 {
 
 .short-info p {
 	font-size: 16px;
-	color: #333;
+	color: var(--paragraph-color);
 	margin: 10px 0;
 }
 
@@ -175,7 +179,7 @@ h4 {
 
 .countDown-item span {
 	font-size: 14px;
-	color: #777;
+	color: var(--paragraph-color);
 	display: block;
 	margin-top: 5px;
 }
@@ -185,20 +189,19 @@ h4 {
 }
 
 .deal-Of-The-Week .btn {
-	background: var(--third-color);
+	background: var(--button-color);
 	color: var(--primary-color);
 	padding: 10px 20px;
 	font-size: 18px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	transition: all 0.3s;
+	transition: all 0.4s ease;
 }
 
 .deal-Of-The-Week .btn:hover {
-	color: var(--third-color);
-    background: var(--primary-color);
-	border: 1px solid var(--third-color);
+	color: var(--primary-color);
+	background: var(--hover-color);
 }
 
 @media screen and (max-width: 1023px) {
@@ -245,14 +248,14 @@ h4 {
 		font-size: 16px;
 	}
 
-    .item-box{
-        padding: 15px;
-    }
+	.item-box {
+		padding: 15px;
+	}
 
-    .countDown-item span.day,
-.countDown-item span.hour,
-.countDown-item span.minute,
-.countDown-item span.second {
-    font-size: 24px;
-}
+	.countDown-item span.day,
+	.countDown-item span.hour,
+	.countDown-item span.minute,
+	.countDown-item span.second {
+		font-size: 24px;
+	}
 }

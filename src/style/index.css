@@ -9,8 +9,8 @@
 body {
 	font-family: 'Manrope', sans-serif;
 	font-weight: 500;
+	background: var(--primary-color);
 	scroll-behavior: smooth;
-	background: #e0e0e0;
 	overflow-x: hidden;
 }
 
@@ -24,8 +24,15 @@ body {
 }
 
 :root {
-	--primary-color: #f5f5f5;
-	--third-color: #a3500c;
+	--primary-color: #faf4f4;
+	--hover-color: #47B5FF;
+	--link-color: #3801d1;
+	--button-color: #256D85;
+	--background-color: #06283D;
+	--paragraph-color: #333;
+	--heading-color: #000;
+	--border-color: #ccc;
+	--card-bg-color: #e0e0e0;
 	color-scheme: light;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -39,7 +46,7 @@ section {
 }
 
 section h2 {
-	color: #000;
+	color: var(--header-color);
 	font-size: 2rem;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -48,7 +55,7 @@ section h2 {
 }
 
 section p {
-	color: #333;
+	color: var(--paragraph-color);
 	font-weight: 500;
 }
 
@@ -62,7 +69,7 @@ section p {
 	height: 100%;
 	width: 100%;
 	z-index: 999;
-	background: rgba(0, 0, 0, 0.5);
+	background: var(--background-color);
 	transition: all 0.3s ease-in;
 	transform: translateX(100%);
 }
@@ -109,7 +116,7 @@ section p {
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid var(--border-color);
 }
 
 .cart-container .cartList {
@@ -137,6 +144,7 @@ section p {
 	text-align: center;
 	font-size: 1.2rem;
 	font-weight: 500;
+	text-transform: capitalize;
 	color: #ccc;
 	width: 100%;
 }
@@ -152,9 +160,9 @@ section p {
 	width: 100%;
 	max-width: 400px;
 	position: relative;
-	border: 1px solid #ccc;
+	border: 1px solid var(--border-color);
 	border-radius: 5px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 10px var(--border-color);
 	transition: all 0.3s ease;
 	padding: 0;
 }
@@ -180,7 +188,7 @@ section p {
 	align-items: center;
 	gap: 10px;
 	text-align: center;
-	background: #e0e0e0;
+	background: var(--card-bg-color);
 	width: 100%;
 	height: 100%;
 	padding: 10px;
@@ -192,7 +200,7 @@ section p {
 	font-size: 1rem;
 	font-weight: 500;
 	text-transform: capitalize;
-	color: #333;
+	color: var(--paragraph-color);
 }
 
 .cart-container .carts .product-card .product-info .priQty {
@@ -244,9 +252,9 @@ section p {
 }
 
 .total-container .cart-total {
-	background: #e0e0e0;
-	border: 1px solid #ccc;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	background: var(--card-bg-color);
+	border: 1px solid var(--border-color);
+	box-shadow: 0 2px 10px var(--border-color);
 	padding: 10px;
 	border-radius: 5px;
 	display: flex;
@@ -279,9 +287,9 @@ section p {
 }
 
 .total-container .cart-total .checkout-btn {
-	background: transparent;
-	color: var(--third-color);
-	border: 1px solid var(--third-color);
+	background: var(--button-color);
+	color: var(--primary-color);
+	border: 1px solid var(--button-color);
 	border-radius: 5px;
 	padding: 10px;
 	margin-top: 10px;
@@ -295,8 +303,9 @@ section p {
 }
 
 .total-container .cart-total .checkout-btn:hover {
-	background: var(--third-color);
+	background: var(--hover-color);
 	color: var(--primary-color);
+	border: 1px solid var(--hover-color);
 }
 
 .search-container {
@@ -342,7 +351,7 @@ section p {
 	width: 100%;
 	height: 100%;
 	padding: 1.5rem 1rem 1rem 1rem;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid var(--border-color);
 }
 
 .search-container .search-list .fa {
@@ -351,14 +360,14 @@ section p {
 	font-size: 1.2rem;
 	padding: 12px;
 	color: #333;
-	border: 1px solid #ccc;
+	border: 1px solid var(--border-color);
 }
 
 .search-container .search-list input {
 	position: relative;
 	width: 100%;
 	padding: 10px 0 10px 50px;
-	border: 1px solid #ccc;
+	border: 1px solid var(--border-color);
 	border-radius: 3px;
 	outline: none;
 	font-size: 1.3rem;
@@ -367,8 +376,7 @@ section p {
 }
 
 .search-container .search-list input:focus {
-	outline: 1px solid var(--third-color);
-
+	outline: 1px solid var(--hover-color);
 }
 
 .search-container .search-list input::placeholder {
@@ -383,9 +391,7 @@ section p {
 	padding: 1rem;
 	gap: 10px;
 	width: 100%;
-	height: calc(
-				100vh - (10vh + 75px) 
-	);
+	height: calc(100vh - (10vh + 75px));
 	overflow-y: auto;
 }
 
@@ -394,9 +400,9 @@ section p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid #ccc;
+	border: 1px solid var(--border-color);
 	border-radius: 3px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 10px var(--border-color);
 	width: 100%;
 	max-width: 350px;
 	height: 150px;
@@ -415,7 +421,7 @@ section p {
 }
 
 .search-container .cards-container .card .card-content {
-	background: #e0e0e0;
+	background: var(--card-bg-color);
 	width: 100%;
 	padding: 8px;
 }
@@ -423,19 +429,19 @@ section p {
 .search-container .cards-container .card .card-content h3 {
 	font-size: 1.03rem;
 	font-weight: 500;
-	color: #333;
+	color: var(--paragraph-color);
 }
 
 .search-container .cards-container .card .card-content p {
 	font-size: 0.89rem;
 	font-weight: 500;
-	color: #333;
+	color: var(--paragraph-color);
 }
 
 .search-container .cards-container .card button {
-	background: transparent;
-	border: 1px solid;
-	color: var(--third-color);
+	background: var(--button-color);
+	border: 1px solid var(--button-color);
+	color: var(--primary-color);
 	font-size: 1rem;
 	font-weight: 500;
 	cursor: pointer;
@@ -446,9 +452,9 @@ section p {
 }
 
 .search-container .cards-container .card button:hover {
-	background: var(--third-color);
+	background: var(--hover-color);
 	color: var(--primary-color);
-	border: 1px solid var(--third-color);
+	border: 1px solid var(--hover-color);
 }
 
 .user-account {
@@ -486,7 +492,7 @@ section p {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid var(--border-color);
 }
 
 .user-account .closeMenu h3 {
@@ -526,13 +532,13 @@ section p {
 .user-account .account-form form .form-control input {
 	width: 100%;
 	padding: 15px;
-	border: 1px solid #ccc;
+	border: 1px solid var(--border-color);
 	outline: none;
 	font-size: 1rem;
 }
 
 .user-account .account-form form .form-control input:focus {
-	outline: 1px solid var(--third-color);
+	outline: 1px solid var(--hover-color);
 }
 
 .user-account .account-form form .form-control i {
@@ -545,18 +551,25 @@ section p {
 }
 
 .user-account .account-form .form-control .btn {
-	background: var(--third-color);
+	background: var(--button-color);
 	border: none;
 	color: var(--primary-color);
 	padding: 10px;
 	text-transform: capitalize;
 	cursor: pointer;
+	transition: all 0.4s ease-in-out;
+}
+
+.user-account .account-form .form-control .btn:hover {
+	background: var(--hover-color);
+	box-shadow: inset 0 -4px 0 var(--hover-color),
+		inset 0 -6px 0 var(--hover-color)
 }
 
 .acc-info p {
 	font-size: 0.9rem;
 	font-weight: 500;
-	color: #333;
+	color: var(--paragraph-color);
 	letter-spacing: 0.4px;
 	text-align: left;
 }
@@ -565,8 +578,12 @@ section p {
 	margin-left: 10px;
 	font-size: 0.9rem;
 	text-decoration: underline;
-	color: var(--third-color);
-	transition: all 0.3s ease-in;
+	color: var(--link-color);
+	transition: all 0.4s ease-in;
+}
+
+.acc-info a:hover {
+	color: var(--hover-color)
 }
 
 /* Mobile Phone Screen */
@@ -578,7 +595,7 @@ section p {
 		left: -100%;
 		height: 100%;
 		width: 75%;
-		transition: all 0.5s ease;
+		transition: all 0.4s ease;
 		z-index: 999;
 	}
 
@@ -598,7 +615,7 @@ section p {
 	section p {
 		padding: 0;
 		margin: 0;
-		color: #333;
+		color: var(--paragraph-color);
 	}
 
 	.search-container {
@@ -688,14 +705,14 @@ section p {
 	.user-account .account-form form .form-control input {
 		width: 100%;
 		padding: 10px;
-		border: 1px solid #ccc;
+		border: 1px solid var(--border-color);
 		outline: none;
 		font-size: 0.89rem;
 	}
 
 	.user-account .account-form form .form-control i {
 		font-size: 20px;
-		color: #6a6a6a;
+		color: var(--paragraph-color);
 	}
 
 	.user-account .account-form .form-control .btn {
@@ -737,7 +754,7 @@ section p {
 	section p {
 		margin: 0;
 		padding: 0;
-		color: #333;
+		color: var(--paragraph-color);
 	}
 
 	.user-account {
@@ -776,7 +793,7 @@ section p {
 .not-found p {
 	font-size: 1.2rem;
 	margin: 10px 0;
-	color: #333;
+	color: var(--paragraph-color);
 }
 
 .not-found ul {
@@ -786,19 +803,19 @@ section p {
 
 .not-found li {
 	font-size: 1.1rem;
-	color: #555;
+	color: var(--paragraph-color);
 	margin: 5px 0;
 }
 
 .not-found a {
 	text-decoration: none;
-	color: #007bff;
+	color: var(--link-color);
 	font-weight: bold;
-	transition: color 0.3s;
+	transition: color 0.4s;
 }
 
 .not-found a:hover {
-	color: #0056b3;
+	color: var(--hover-color);
 }
 
 .acc-container {
@@ -807,10 +824,12 @@ section p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-top: 8%;
+	margin-top: 3rem;
 }
 
 .acc-container h1 {
+	margin-top: 3rem;
+	;
 	font-size: 2em;
 }
 
@@ -822,18 +841,17 @@ section p {
 }
 
 .acc-container .backHome a {
-	margin-bottom: 20px;
 	display: block;
 	width: 90px;
 	height: 30px;
-	background: #fafafa;
-	border: 1px solid #ddd;
+	background: var(--primary-color);
+	border: 1px solid var(--border-color);
 	line-height: 30px;
 	text-align: center;
 	cursor: pointer;
-	color: #444;
+	color: var(--paragraph-color);
 	border-radius: 5px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+	box-shadow: 0 0 10px var(--border-color);
 }
 
 .acc-container .createAcc {
@@ -854,11 +872,11 @@ section p {
 	width: 100%;
 	max-width: 400px;
 	height: auto;
-	border: 2px solid #ccc;
+	border: 1px solid var(--border-color);
 	background-color: var(--primary-color);
-	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+	box-shadow: 0 0 10px var(--border-color);
 	padding: 2% 5%;
-	margin: 20px;
+	margin: 2rem 0;
 	border-radius: 5px;
 }
 
@@ -875,7 +893,7 @@ section p {
 .acc-container .createAcc form input {
 	width: 100%;
 	padding: 10px;
-	border: 1px solid #ccc;
+	border: 1px solid var(--border-color);
 	border-radius: 5px;
 	outline: none;
 	font-size: 1rem;
@@ -898,14 +916,17 @@ section p {
 	padding: 10px;
 	border: none;
 	cursor: pointer;
-	background: var(--third-color);
-	color: white;
+	background: var(--button-color);
+	color: var(--primary-color);
 	border-radius: 5px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	transition: background-color 0.3s ease;
+	transition: background-color 0.4s ease;
 }
 
+.acc-container .createAcc form button:hover{
+	background: var(--hover-color);
+}
 /* Desktop And Bigger Screens */
 
 @media screen and (min-width: 1024px) {

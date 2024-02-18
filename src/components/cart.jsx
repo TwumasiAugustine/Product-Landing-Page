@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { useGlobalContext } from '../context';
-import CheckOut from '../component/checkout';
+import CheckOut from './checkout';
 
 const Cart = ({ openCart, openCartMenu }) => {
-	const { removeCart, cart, handleQuantityChange } =
-		useGlobalContext();
+	const { removeCart, cart, handleQuantityChange } = useGlobalContext();
 
 	return (
 		<div className={`cart-container ${openCart ? 'open' : ''}`}>
@@ -33,7 +32,7 @@ const Cart = ({ openCart, openCartMenu }) => {
 									<div className='img-container'>
 										<img
 											src={`./images/${item.image}`}
-											alt='watch'
+											alt={item.productName}
 											loading='lazy'
 										/>
 									</div>
@@ -78,7 +77,7 @@ const Cart = ({ openCart, openCartMenu }) => {
 							))
 						)}
 					</div>
-					<CheckOut/>
+					<CheckOut />
 				</div>
 			</div>
 		</div>

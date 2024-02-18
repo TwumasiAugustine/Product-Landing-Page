@@ -4,7 +4,7 @@
 }
 
 .customerService .short-info {
-    color: #333;
+    color: var(--paragraph-color);
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
@@ -44,7 +44,7 @@
 }
 
 .customerService .customerServiceContainer .customerServiceBox .customerServiceText p {
-    color: #333;
+    color: var(--paragraph-color);
 }
 
 @media screen and (max-width: 767px) {

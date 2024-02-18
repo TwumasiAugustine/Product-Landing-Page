@@ -1,7 +1,7 @@
 import React from 'react';
-import Banner from '../component/banner';
-import BestSellers from '../component/bestSellers';
-import NewProducts from '../component/newProducts';
+import Banner from '../components/banner';
+import BestSellers from '../components/bestSellers';
+import NewProducts from '../components/newProducts';
 
 function Collection() {
 	return (

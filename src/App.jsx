@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Footer from './component/Footer';
-import Header from './component/Header';
-import Content from './component/HomeContent';
-import CreateAcc from './component/createAcc';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Content from './components/HomeContent';
+import CreateAcc from './components/createAcc';
 import About from './page/About';
 import Collection from './page/Collection';
 import Contact from './page/Contact';

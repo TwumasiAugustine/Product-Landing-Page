@@ -8,9 +8,34 @@
 	"theme_color": "#0073e6",
 	"icons": [
 		{
-			"src": "path-to-your-icon.png",
+			"src": "./src/assets/logo.png",
+			"sizes": "72x72",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "./src/assets/logo.png",
+			"sizes": "128x128",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "./src/assets/logo.png",
+			"sizes": "144x144",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "./src/assets/logo.png",
 			"sizes": "192x192",
-			"type": "image/png"
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "./src/assets/logo.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
 		}
 	],
 	"related_applications": [
@@ -27,16 +52,14 @@
 	"orientation": "portrait",
 	"lang": "en-US",
 	"dir": "ltr",
-	"categories": [
-		"e-commerce",
-		"productivity"
-	],
+	"categories": ["e-commerce", "productivity"],
 	"iarc_rating_id": "iarc_rating_id",
 	"screenshots": [
 		{
-			"src": "path-to-your-screenshot.png",
+			"src": "./src/assets/logo.png",
 			"sizes": "1280x720",
-			"type": "image/png"
+			"type": "image/png",
+			"purpose": "maskable"
 		}
 	],
 	"shortcuts": [
@@ -45,21 +68,32 @@
 			"url": "./index.html",
 			"icons": [
 				{
-					"src": "path-to-your-icon.png",
+					"src": "./src/assets/logo.png",
 					"sizes": "192x192",
-					"type": "image/png"
+					"type": "image/png",
+					"purpose": "maskable"
 				}
 			]
 		}
 	],
+	"permissions": [
+		"network",
+		"geolocation",
+		"notifications",
+		"camera",
+		"microphone",
+		"storage",
+		"cookies"
+	],
 	"share_target": {
 		"action": "./index.html",
-		"method": "GET",
-		"enctype": "multipart/form-data",
+		"method": "POST",
+		"enctype": "application/x-www-form-urlencoded",
 		"params": {
 			"title": "title",
 			"text": "text",
-			"url": "url"
+			"url": "url",
+			"id": "id"
 		}
 	},
 	"custom": {

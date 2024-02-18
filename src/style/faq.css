@@ -40,7 +40,7 @@
     flex-direction: row;
     justify-content: space-between;
     cursor: pointer;
-    background-color: var(--third-color);
+    background-color: var(--background-color);
     color: var(--primary-color)
 }
 
@@ -50,7 +50,7 @@
 }
 
 .accordion-content {
-    background-color: #e0e0e0;
+    background-color: var(--border-color);
 }
 
 .faq .container .sideImgContainer {

@@ -36,7 +36,7 @@ function BestSellers() {
 		arrows: true,
 		pagination: false,
 		lazyLoad: 'nearby',
-		height: '300px',
+		height: 'auto',
 		breakpoints: {
 			640: {
 				perPage: 2,

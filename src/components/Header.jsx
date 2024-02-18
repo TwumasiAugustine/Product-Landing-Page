@@ -2,16 +2,16 @@ import 'animate.css';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png';
-import CollectionNav from '../component/collectionNav';
-import FirstHeader from '../component/firstHeader';
-import SecondHeader from '../component/secondHeader'
-import MaterialNav from '../component/material';
-import Styles from '../component/styles';
 import { useGlobalContext } from '../context';
 import '../style/Header.css';
 import Account from './account';
 import Cart from './cart';
+import CollectionNav from './collectionNav';
+import FirstHeader from './firstHeader';
+import MaterialNav from './material';
 import Search from './search';
+import SecondHeader from './secondHeader';
+import Styles from './styles';
 import WishList from './wishList';
 
 function Header() {
@@ -42,7 +42,7 @@ function Header() {
 
 	const openNavMenu = () => {
 		setOpenNav(!openNav);
-        console.log('clicked')
+		console.log('clicked');
 	};
 
 	const openCartMenu = () => {

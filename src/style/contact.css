@@ -6,6 +6,7 @@
 .contact-info h1 {
     font-size: 2rem;
     font-weight: 700;
+    margin-top: 3rem;
 }
 
 .contact-info p {
@@ -14,29 +15,33 @@
     margin-bottom: 1rem;
 }
 
-.contact-info .table-container, .branch{
+.contact-info .table-container, .branch {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     margin: 2rem 0;
 }
+
 .contact-info table {
     width: 100%;
     max-width: 500px;
-    border: 2px solid #ccc;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
     border-collapse: collapse;
 }
 
 
 .contact-info table tr {
-    border: 2px solid #ccc;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
 }
 
 .contact-info table tr th {
     padding: 10px;
     font-size: 1rem;
-    border: 2px solid #ccc;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
     font-weight: 700;
 
 }
@@ -44,7 +49,8 @@
 .contact-info table tr td {
     padding: 10px;
     font-size: 1rem;
-    border: 2px solid #ccc;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
     font-weight: 400;
 }
 
@@ -53,15 +59,15 @@
 }
 
 .contact-info table tr td a {
-    color: var(--third-color);
+    color: var(--link-color);
 }
 
-.contact-info .branch ul{
+.contact-info .branch ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.contact-info .branch ul li{
+.contact-info .branch ul li {
     margin-bottom: 1rem;
 }

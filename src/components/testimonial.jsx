@@ -3,7 +3,7 @@ import 'animate.css';
 import data from '../data/testimonial.json';
 import '../style/testimonial.css'; 
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+import '@splidejs/react-splide/css/skyblue';
 
 function Testimonial() {
 	const [emailValue, setEmailValue] = useState('');
@@ -24,28 +24,32 @@ function Testimonial() {
 		type: 'loop',
 		gap: '1rem',
 		autoplay: true,
-		perPage: 1,
-		perMove: 1,
-		arrows: true,
-		drag: 'free',
+		interval: 3000,
+		pauseOnHover: true,
+		resetProgress: false,
 		focus: 'center',
-		pagination: false,
+		arrows: true,
+		pagination: true,
 		lazyLoad: 'nearby',
 		height: 'auto',
+		rewind: true,
 		breakpoints: {
 			640: {
 				perPage: 2,
 				perMove: 1,
-				arrows: false
+				arrows: true,
+				height: 'auto'
 			},
 			768: {
 				perPage: 2,
 				perMove: 1,
-				arrows: false
+				arrows: false,
+				height: 'auto'
 			},
 			1024: {
 				perPage: 3,
-				perMove: 1
+				perMove: 1,
+				height: 'auto'
 			}
 		}
 	};
@@ -58,50 +62,13 @@ function Testimonial() {
 					Our customers are happy with our products
 				</p>
 				<div className='wrapper'>
-					{/* <Splide
-						options={options}
-						aria-labelledby='testimonials'
-						hasTrack={false}
-					>
-						<SplideTrack>
-							{data.map((item) => {
-								const { id, image, name, text, work } = item
-								return (
-									<SplideSlide key={id}>
-										<div className='testimonial-card'>
-											<div className='testimonial-img'>
-												<img
-													src={image}
-													alt={name}
-													loading='lazy'
-												/>
-											</div>
-											<div className='testimonial-info'>
-												<p className='testimonial-text'>
-													{text}
-												</p>
-												<div className='testimonial-user'>
-													<h3 className='testimonial-user-name'>
-														{name}
-													</h3>
-												</div>
-												<small>
-													{work}
-												</small>
-											</div>
-										</div>
-									</SplideSlide>
-								);
-							})}
-						</SplideTrack>
-					</Splide> */}
 					<Splide
 						aria-labelledby='testimonials'
-						options={options}
-					>
+						option={options}>
 						<SplideTrack>
 							{data.map((testimonial) => {
-								const { id, image, name, text, work } = testimonial;
+								const { id, image, name, text, work } =
+									testimonial;
 								return (
 									<SplideSlide key={id}>
 										<div className='testimonial-card'>

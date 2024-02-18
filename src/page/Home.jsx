@@ -1,7 +1,7 @@
 import 'animate.css';
 import React from 'react';
-import ChooseUs from '../component/chooseUs';
-import Table from '../component/table';
+import ChooseUs from '../components/chooseUs';
+import Table from '../components/table';
 import '../style/product.css';
 
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
@@ -42,7 +42,7 @@ const Home = () => {
 		arrows: true,
 		pagination: false,
 		lazyLoad: 'nearby',
-		height: '300px',
+		height: 'auto',
 		breakpoints: {
 			640: {
 				perPage: 2,

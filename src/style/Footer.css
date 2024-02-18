@@ -1,6 +1,6 @@
 footer .footer-one {
-    background: #111111;
-    color: #fff;
+    background: var(--background-color);
+    color: var(--primary-color);
 }
 
 footer .footer-one ul {
@@ -20,7 +20,7 @@ footer .footer-one ul li i {
 }
 
 footer .footer-one ul li a {
-    color: #fff;
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 500;
@@ -28,7 +28,7 @@ footer .footer-one ul li a {
 }
 
 footer .footer-one ul li a:hover {
-    color: var(--third-color);
+    color: var(--link-color);
 }
 
 footer .footer-one .buttomNavContainer {
@@ -41,10 +41,11 @@ footer .footer-one .buttomNavContainer {
 
 footer .footer-one .buttomNavContainer h3 {
     text-transform: uppercase;
+    padding: 20px 0;
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    color: var(--third-color);
+    color: var(--header-color);
 }
 
 footer .footer-two {
@@ -53,7 +54,7 @@ footer .footer-two {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background: #2f2f2f;
+    background: var(--button-color);
     color: var(--primary-color);
     padding: 1rem;
 }
@@ -65,11 +66,11 @@ footer .footer-two .copyright p {
 }
 
 footer .footer-two span {
-    color: var(--third-color);
+    color: var(--background-color);
 }
 
 footer .footer-two a {
-    color: var(--third-color);
+    color: var(--link-color);
     transition: all 0.4s ease-in;
     text-decoration: underline;
 }
@@ -96,7 +97,7 @@ footer .footer-two .nav-link ul li a {
 }
 
 footer .footer-two .nav-link ul li a:hover {
-    color: var(--third-color)
+    color: var(--link-color)
 }
 
 /* Mobile and Smart Phone Screen */
@@ -130,7 +131,7 @@ footer .footer-two .nav-link ul li a:hover {
     }
 
     footer .footer-one .buttomNavContainer a {
-        color: #ddd;
+        color: var(--primary-color);
     }
 
     footer .footer-one ul li i {

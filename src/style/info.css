@@ -36,8 +36,8 @@
     height: 200px;
     text-align: left;
     transition: all 0.3s ease-in;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 13px rgba(0, 0, 0, 0.3)
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 13px var(--border-color)
 }
 
 .contact .contact-container .contact-info-cards .contact-info-card-icon {
@@ -47,16 +47,16 @@
     font-size: 2rem;
     width: 4rem;
     height: 4rem;
-    border: 1px dashed var(--third-color);
+    border: 1px dashed var(--background-color);
     border-radius: 50%;
-    color: var(--third-color);
+    color: var(--background-color);
 }
 
 .contact .contact-container .contact-info-cards .contact-info-card-text p,
 a {
     font-size: 1.05rem;
     font-weight: 500;
-    color: #333;
+    color: var(--paragraph-color);
     text-decoration: none;
     text-align: center;
 }
@@ -75,9 +75,9 @@ a {
     width: 100%;
     max-width: 500px;
     background: var(--primary-color);
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 3px;
-    box-shadow: 0 2px 13px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 13px var(--border-color);
 }
 
 .contact .contact-container form .form-group {
@@ -90,14 +90,14 @@ a {
     padding: 1rem;
     font-size: 1rem;
     font-weight: 500;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 3px;
     outline: none;
     transition: all 0.3s ease;
 }
 
 .contact .contact-container form .form-group input:focus {
-    border: 1px solid var(--third-color);
+    border: 1px solid var(--hover-color);
 }
 
 .contact .contact-container form .form-group input::placeholder,
@@ -110,14 +110,14 @@ textarea::placeholder {
     height: 250px;
     padding: 1rem;
     font-size: 1.2rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 3px;
     outline: none;
     transition: all 0.3s ease;
 }
 
 .contact .contact-container form .form-group textarea:focus {
-    border: 1px solid var(--third-color);
+    border: 1px solid var(--hover-color);
 }
 
 .contact .contact-container form button {
@@ -125,18 +125,18 @@ textarea::placeholder {
     padding: 1rem;
     font-size: 1rem;
     font-weight: 500;
-    border: 1px solid var(--third-color);
+    border: 1px solid var(--button-color);
     border-radius: 3px;
     outline: none;
     transition: all 0.4s ease;
-    background: var(--primary-color);
-    color: var(--third-color);
+    background: var(--button-color);
+    color: var(--primary-color);
     cursor: pointer;
 }
 
 .contact .contact-container form button:hover {
-    border: 1px solid var(--third-color);
-    background: var(--third-color);
+    border: 1px solid var(--hover-color);
+    background: var(--hover-color);
     color: var(--primary-color);
 }
 

@@ -10,7 +10,7 @@
 
 .testimonial .short-info {
 	font-size: 18px;
-	color: #333;
+	color: var(--paragraph-color);
 	padding-bottom: 20px;
 }
 
@@ -35,10 +35,11 @@
 	background: var(--primary-color);
 	border: 1px solid #ccc;
 	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px var(--border-color);
 	text-align: center;
 	margin: 0 20px;
-	width:250px;
+	height: auto;
+	width: 350px;
 }
 
 .testimonial-img img {
@@ -85,33 +86,33 @@
 	width: 100%;
 	max-width: 500px;
 	padding: 20px;
-	border: 1px solid #ccc;
+	border: 1px solid var(--border-color);
 	border-radius: 5px;
 	font-size: 1.33rem;
-	background: #f7f7f7;
+	background: var(--primary-color);
 	outline: none;
 }
 
 .subscribe form input:focus{
-	border: 1px solid var(--third-color);
+	border: 1px solid var(--hover-color);
 }
 #subscribeBtn {
 	width: 120px;
 	padding: 20px;
 	border: 1px solid;
 	border-radius: 5px;
-	background-color: var(--third-color);
-	color: #fff;
+	background-color: var(--button-color);
+	color: var(--primary-color);
 	font-size: 18px;
 	margin-left: 10px;
 	cursor: pointer;
-	transition: all .3s;
+	transition: all .4s ease;
 }
 
 #subscribeBtn:hover {
-	background-color: var(--primary-color);
-	color: var(--third-color);
-	border: 1px solid var(--third-color);
+	background-color: var(--hover-color);
+	color: var(--primary-color);
+	border: 1px solid var(--border-color);
 }
 
 
@@ -127,7 +128,7 @@
 
 .downloadApp .short-info {
 	font-size: 18px;
-	color: #333;
+	color: var(--paragraph-color);
 	margin-bottom: 40px;
 }
 
@@ -139,17 +140,21 @@
 
 .downloadApp-container a {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	text-decoration: none;
-	color: var(--third-color);
+	background: var(--button-color);
+	color: var(--primary-color);
+	width: fit-content;
+	border: 1px solid var(--button-color);
+	border-radius: 3px;
+	padding: 10px;
 	font-size: 18px;
 	margin: 0 20px;
 }
 
 .downloadApp-container i {
 	font-size: 40px;
-	margin-bottom: 10px;
+	margin-right: 10px;
 }
 
 /* Media query for smartphones */

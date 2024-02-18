@@ -27,13 +27,13 @@
 
 .compareTable .product-table table tr th {
     padding: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
 }
 
 .compareTable .product-table tr td img {
     height: 80px;
     width: 100px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .compareTable .product-table tr td {
@@ -43,12 +43,12 @@
     font-size: 1rem;
     font-weight: 500;
     text-transform: capitalize;
-    border: 1px solid #ccc;
-    color: #000;
+    border: 1px solid var(--border-color);
+    color: var(--heading-color);
 }
 
 .compareTable .product-table table tr td:first-child {
-    color: #000;
+    color: var(--heading-color);
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -56,24 +56,24 @@
 .compareTable .product-table tr td button {
     display: inline-block;
     padding: 10px;
-    background-color: transparent;
-    color: var(--third-color);
+    background-color: var(--button-color);
+    color: var(--primary-color);
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
-    border: 1px solid var(--third-color);
+    border: 1px solid var(--button-color);
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     margin: 1rem 0;
     width: 100%;
 }
 
 .compareTable .product-table tr button:hover {
-    background-color: var(--third-color);
+    background-color: var(--hover-color);
     color: var(--primary-color);
-    border: 1px solid var(--third-color);
+    border: 1px solid var(--hover-color);
 }
 
 /* Mobile and Smart Phone Screens */

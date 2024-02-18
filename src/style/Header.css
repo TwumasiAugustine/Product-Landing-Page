@@ -5,7 +5,7 @@
     height: 5vh;
     background: var(--primary-color);
     width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px var(--border-color);
     background: #111111;
 }
 
@@ -75,7 +75,7 @@
     right: 0;
     background-color: var(--primary-color);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px var(--border-color);
     z-index: 1;
 }
 
@@ -86,7 +86,7 @@
 }
 
 #header .firstHeader .hoverDropdown .dropdown .dropdown-content a:hover {
-    background-color: var(--third-color);
+    background-color: var(--background-color);
     color: var(--primary-color);
 }
 
@@ -107,7 +107,7 @@
     width: 100%;
     padding: 0 3rem;
     height: 7vh;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0 10px var(--border-color); */
     transition: all 0.3s ease;
 }
 
@@ -118,7 +118,7 @@
 }
 
 #header .secondHeader .navbar a:hover {
-    color: var(--third-color);
+    color: var(--link-color);
 }
 
 #header .mainHeader {
@@ -148,7 +148,7 @@
 }
 
 #header .mainHeader .logo a:hover {
-    color: var(--third-color);
+    color: var(--hover-color);
 }
 
 #header .mainHeader .logo a img {
@@ -189,7 +189,7 @@
 }
 
 #header .mainHeader .nav-container nav .hoverDropdownMenu .dropdown .dropbtn:hover {
-    color: var(--third-color)
+    color: var(--background-color)
 }
 
 #header .mainHeader .nav-container nav .hoverDropdownMenu .dropdown .dropbtn i {
@@ -203,7 +203,7 @@
     left: 0;
     background-color: var(--primary-color);
     min-width: 400px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 2px 2px var(--border-color);
     z-index: 1;
 }
 
@@ -233,7 +233,7 @@
 }
 
 #header .mainHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content ul li:hover {
-    background: var(--third-color);
+    background: var(--background-color);
     color: var(--primary-color)
 }
 
@@ -320,9 +320,9 @@
 }
 
 .activeLink {
-    color: #007bff !important;
-    font-weight: bold !important;
-    border-bottom: 2px solid #007bff;
+    color: var(--link-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--link-color);
 }
 
 
@@ -456,7 +456,7 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        background: #fffffff6;
+        background: var(--primary-color);
     }
 
     #header .mainHeader .nav-container nav .hoverDropdownMenu .dropdown .dropdown-content .list {
